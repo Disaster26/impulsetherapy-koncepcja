@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Trening personalny EMS w Łodzi z dojazdem do domu | Impulse Therapy</title>
+<meta name="description" content="Trening personalny EMS z dojazdem do domu w Łodzi i okolicach. 20 minut treningu całego ciała, trener 1:1 z kompletnym sprzętem. Trening próbny 100 zł.">
+<meta name="theme-color" content="#F7A31C">
+<link rel="icon" href="img/znak.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/ar-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fg-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-fig.webp" fetchpriority="high">
+<style>
+@font-face{font-family:"Archivo";src:url(fonts/ar-latin.woff2) format("woff2");font-weight:800;font-stretch:112%;font-display:swap;unicode-range:U+0000-00FF,U+2013,U+2019,U+201C-201E,U+2026}
+@font-face{font-family:"Archivo";src:url(fonts/ar-ext.woff2) format("woff2");font-weight:800;font-stretch:112%;font-display:swap;unicode-range:U+0100-017F}
+@font-face{font-family:"Figtree";src:url(fonts/fg-latin.woff2) format("woff2");font-weight:400 700;font-display:swap;unicode-range:U+0000-00FF,U+2013,U+2019,U+201C-201E,U+2026}
+@font-face{font-family:"Figtree";src:url(fonts/fg-ext.woff2) format("woff2");font-weight:400 700;font-display:swap;unicode-range:U+0100-017F}
+:root{
+  --or:#F7A31C;--or-d:#E08E06;--ink:#141414;--ink-2:#232323;--muted:#555A61;--grey:#F1F2F4;--line:#E1E3E7;--white:#FFFFFF;
+  --wrap:min(92vw,1680px);--head:72px;--r:6px;
+  --wave:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'%3E%3Cpath d='M0 7H22V2H30V12H38V7H60V2H68V12H76V7H120' fill='none' stroke='%23F7A31C' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--ink);background:var(--white);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;font-weight:800;font-stretch:112%;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.2vw,52px)}
+h3{font-size:clamp(20px,1.5vw,25px)}
+.wrap{width:var(--wrap);margin:0 auto}
+.lead{font-size:clamp(17px,1.25vw,20px);color:var(--muted);max-width:62ch}
+.h-wave{display:block;width:120px;height:14px;background:var(--wave) no-repeat;margin:18px 0 0}
+section{padding:clamp(64px,8vw,128px) 0}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:54px;padding:0 24px;border-radius:var(--r);font-weight:700;font-size:17px;text-decoration:none;border:2px solid var(--ink);transition:background .2s,color .2s,transform .15s}
+.btn svg{width:14px;height:14px;flex:none}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-1px)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-or{background:var(--or);border-color:var(--or);color:var(--ink)}
+.btn-or:hover{background:#fff;border-color:#fff}
+
+/* header */
+.top{position:fixed;inset:0 0 auto 0;z-index:50;height:var(--head);transition:background .25s,box-shadow .25s}
+.top.on{background:rgba(255,255,255,.97);box-shadow:0 1px 0 var(--line)}
+.top .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo img{width:clamp(130px,10vw,168px);height:auto}
+.nav{display:flex;align-items:center;gap:clamp(16px,1.8vw,34px)}
+.nav a{text-decoration:none;font-weight:600;font-size:16px}
+.nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.nav .btn{min-height:44px;padding:0 18px;font-size:16px}
+.burger{display:none;width:46px;height:46px;border:2px solid var(--ink);border-radius:var(--r);background:none;align-items:center;justify-content:center;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:var(--ink);position:relative;content:"";transition:transform .2s}
+.burger span::before{position:absolute;top:-6px}.burger span::after{position:absolute;top:6px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{transform:translateY(6px) rotate(45deg)}
+.menu-open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;background:var(--or);min-height:100svh;padding:calc(var(--head) + 24px) 0 0;display:flex;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(24px,4vw,80px);min-height:calc(100svh - var(--head) - 24px)}
+.hero-txt{padding-bottom:clamp(32px,6vh,80px)}
+.hero h1{font-size:clamp(34px,4vw,74px);max-width:16ch}
+.hero p{font-size:clamp(17px,1.35vw,22px);max-width:40ch;margin-top:24px;color:#2A2205}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-note{margin-top:22px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:10px}
+.hero-note::before{content:"";width:46px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='12' viewBox='0 0 46 12'%3E%3Cpath d='M0 6H12V1.5H18V10.5H24V6H46' fill='none' stroke='%23141414' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat}
+.hero-fig{justify-self:center;align-self:end;width:min(100%,640px);margin-bottom:clamp(24px,5vh,64px)}
+.fig-in{position:relative;width:100%;aspect-ratio:1;display:flex;align-items:flex-end;justify-content:center}
+.ring{position:absolute;inset:0;z-index:2;pointer-events:none;border:clamp(8px,1vw,14px) solid var(--ink);border-radius:50%}
+.fig-in img{position:relative;z-index:1;width:auto;height:auto;max-height:100%;max-width:62%;object-fit:contain;transform:translateY(2%);-webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 62%,transparent 100%)}
+.sm{display:none}
+
+/* jak wygląda */
+.visit{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,5vw,96px);align-items:start}
+.steps{list-style:none;margin-top:36px;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+.steps b{display:block;font-size:18px}
+.steps span{color:var(--muted)}
+.steps i{font-style:normal;font-family:"Archivo";font-weight:800;font-stretch:112%;color:var(--or-d);font-size:18px;line-height:1.5}
+.visit>div:last-child{position:sticky;top:calc(var(--head) + 32px)}
+.needs{margin-top:28px;padding:20px 22px;background:var(--grey);border-radius:var(--r);font-size:16px}
+.needs strong{display:block;margin-bottom:4px}
+
+/* galerie swipe */
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.rail::-webkit-scrollbar{display:none}
+.rail.drag{cursor:grabbing;scroll-snap-type:none}
+.rail>*{scroll-snap-align:start;flex:none}
+.rail img{pointer-events:none;user-select:none}
+.rail-ctl{display:flex;gap:10px;margin-top:20px}
+.rail-ctl button{width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:none;cursor:pointer;display:grid;place-items:center}
+.rail-ctl button:hover{background:var(--ink);color:#fff}
+.rail-ctl svg{width:16px;height:16px}
+.photos figure{width:min(78vw,520px)}
+.photos img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r)}
+.photos figcaption{font-size:15px;color:var(--muted);margin-top:10px}
+
+/* oferta */
+.offer{background:var(--grey)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.cards .card{width:clamp(280px,24vw,400px);background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card-img{aspect-ratio:4/3;overflow:hidden;background:var(--or);display:flex;align-items:flex-end;justify-content:center}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.card-img.cut img{width:auto;height:94%;object-fit:contain}
+.card-txt{padding:22px 22px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-txt p{color:var(--muted);font-size:16px}
+.card-txt .more{margin-top:auto;padding-top:8px;font-weight:700;text-decoration:none;display:inline-flex;gap:10px;align-items:center}
+.card-txt .more svg{width:12px;height:12px}
+
+/* cennik */
+.price{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,5vw,96px);align-items:start}
+.plist{border-top:2px solid var(--ink)}
+.prow{display:grid;grid-template-columns:1fr auto;gap:8px 24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.prow h3{font-size:clamp(19px,1.4vw,23px)}
+.prow small{grid-column:1;color:var(--muted);font-size:15px}
+.prow .val{font-family:"Archivo";font-weight:800;font-stretch:112%;font-size:clamp(24px,2vw,34px);white-space:nowrap;grid-row:1/3;grid-column:2;align-self:center}
+.prow.hl{background:var(--or);margin:0 -20px;padding:22px 20px;border-radius:var(--r);border-bottom:0}
+.prow.hl small{color:#3A2C08}
+.pnotes{list-style:none;margin-top:28px;display:grid;gap:10px;font-size:16px;color:var(--muted)}
+.pnotes li{padding-left:26px;position:relative}
+.pnotes li::before{content:"";position:absolute;left:0;top:.62em;width:14px;height:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M0 4H4V1H7V7H10V4H14' fill='none' stroke='%23E08E06' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat}
+
+/* zespół */
+.team{background:var(--ink);color:#fff;position:relative}
+.team .lead{color:#C9CCD1}
+.team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,96px);margin-top:56px}
+.person{display:grid;grid-template-columns:clamp(150px,14vw,240px) 1fr;gap:clamp(20px,2.4vw,40px);align-items:center}
+.portrait{aspect-ratio:1;border-radius:50%;background:var(--or);border:6px solid var(--or);overflow:hidden;display:flex;align-items:flex-end;justify-content:center;position:relative}
+.portrait::after{content:"";position:absolute;inset:6px;border-radius:50%;border:2px solid rgba(20,20,20,.25)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 8%}
+.person h3{font-size:clamp(22px,1.7vw,28px)}
+.person .role{color:var(--or);font-weight:700;margin:4px 0 10px}
+.person p{color:#C9CCD1;font-size:16px}
+
+/* opinie */
+.reviews .rev{width:clamp(280px,28vw,440px);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:16px}
+.rev q{quotes:none;font-size:17px}
+.rev cite{font-style:normal;font-weight:700;margin-top:auto}
+.rev cite span{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.stars{color:var(--or-d);letter-spacing:2px;font-size:15px}
+
+/* dojazd */
+.area{background:var(--grey)}
+.area-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,96px);align-items:center}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;list-style:none}
+.towns li{padding:8px 14px;background:#fff;border-radius:var(--r);font-weight:600;font-size:15px}
+.towns li.main{background:var(--ink);color:#fff}
+.fee{margin-top:24px;font-size:16px}
+.map{aspect-ratio:4/3;border-radius:var(--r);overflow:hidden;background:#dfe2e6;position:relative}
+.map iframe{width:100%;height:100%;border:0}
+.map button{position:absolute;inset:0;border:0;background:#dfe2e6;font:inherit;font-weight:700;cursor:pointer;color:var(--ink)}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(32px,5vw,96px)}
+details{border-bottom:1px solid var(--line)}
+details:first-child{border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;font-size:18px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{padding:0 0 22px;color:var(--muted);max-width:70ch}
+
+/* kontakt */
+.contact{background:var(--or)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,96px);align-items:start}
+.contact .lead{color:#2A2205}
+.tel{display:inline-block;font-family:"Archivo";font-weight:800;font-stretch:112%;font-size:clamp(34px,4vw,64px);text-decoration:none;margin-top:28px;line-height:1}
+.tel:hover{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px}
+.mail{display:block;margin-top:14px;font-weight:700;font-size:19px}
+.form{background:#fff;border-radius:var(--r);padding:clamp(24px,2.6vw,40px);display:grid;gap:16px}
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:grid;gap:6px;font-weight:600;font-size:15px}
+.form input,.form select,.form textarea{font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid #C9CDD3;border-radius:var(--r);background:#fff;color:var(--ink);width:100%}
+.form input:focus,.form select:focus,.form textarea:focus{outline:2px solid var(--ink);outline-offset:1px;border-color:var(--ink)}
+.form textarea{min-height:110px;resize:vertical}
+.form .btn{justify-content:center;width:100%;cursor:pointer;font:inherit;font-weight:700}
+.form small{color:var(--muted);font-size:13px}
+.form-ok{display:none;padding:14px;background:var(--grey);border-radius:var(--r);font-weight:600}
+
+/* stopka */
+.foot{background:var(--ink);color:#C9CCD1;padding:56px 0 28px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.foot img{width:150px}
+.foot h4{color:#fff;font-size:15px;margin-bottom:10px}
+.foot ul{list-style:none;display:grid;gap:6px}
+.foot a{text-decoration:none}.foot a:hover{color:#fff;text-decoration:underline}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:44px;padding-top:22px;border-top:1px solid #2E2F31;font-size:14px}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+/* responsywność */
+@media (min-width:1900px){.cards .card{width:clamp(300px,19.5vw,420px)}.photos figure{width:min(30vw,600px)}}
+@media (max-width:1180px){.nav a:not(.btn){display:none}}
+@media (max-width:900px){
+  :root{--head:64px}
+  .logo img{width:124px}
+  .nav{display:none}
+  .burger{display:inline-flex}
+  .menu-open .nav{display:flex;position:fixed;top:var(--head);left:0;right:0;bottom:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:12px 4vw 32px;overflow:auto}
+  .menu-open .nav a:not(.btn){display:block;padding:16px 0;border-bottom:1px solid var(--line);font-size:20px}
+  .menu-open .nav .btn{margin-top:24px;justify-content:center;min-height:54px}
+  .menu-open .top{background:#fff}
+  .hero{padding-top:calc(var(--head) + 8px)}
+  .hero .wrap{display:flex;flex-direction:column;gap:0;min-height:calc(100svh - var(--head) - 8px)}
+  .hero-txt{padding-bottom:0}
+  .hero h1{font-size:clamp(29px,8.2vw,46px)}
+  .hero p{font-size:16px;margin-top:14px}
+  .hero-cta{margin-top:20px;gap:10px}
+  .hero-cta .btn{min-height:50px;padding:0 18px;font-size:16px}
+  .hero-note{margin-top:14px;font-size:14px}
+  .hero-fig{flex:1 1 0;min-height:130px;width:100%;margin:16px 0 18px;display:flex;justify-content:center;align-items:flex-end;align-self:stretch;container-type:size}
+  .fig-in{width:min(100cqw,100cqh,420px);height:min(100cqw,100cqh,420px)}
+  .visit,.price,.area-grid,.faq-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .visit>div:last-child{position:static}
+  .team-grid{grid-template-columns:minmax(0,1fr);gap:44px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid>div:first-child{grid-column:1/-1}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .hero-cta{flex-wrap:nowrap}
+  .hero-cta .btn{flex:1 1 0;justify-content:center;padding:0 12px;gap:8px}
+  .lg{display:none}.sm{display:inline}
+  .person{grid-template-columns:1fr;gap:16px}
+  .portrait{width:150px}
+  .form .row{grid-template-columns:1fr}
+  .prow.hl{margin:0 -12px;padding:20px 12px}
+  .cards .card{width:82vw}
+  .reviews .rev{width:84vw}
+}
+@media (max-width:900px) and (max-height:700px){
+  .hero h1{font-size:clamp(27px,7.6vw,40px)}
+  .hero p{margin-top:10px;font-size:15.5px;line-height:1.5}
+  .hero-cta{margin-top:16px}
+  .hero-note{margin-top:12px}
+  .hero-fig{margin:12px 0 14px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Impulse Therapy - strona główna"><img src="img/logo-ciemne.png" width="291" height="95" alt="Impulse Therapy"></a>
+    <nav class="nav" id="nav" aria-label="Menu główne">
+      <a href="#trening">Trening w domu</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#zespol">Zespół</a>
+      <a href="#dojazd">Dojazd</a>
+      <a href="#faq">Pytania</a>
+      <a class="btn btn-dark" href="tel:+48729830460">729 830 460</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-label="Trening EMS w domu">
+  <div class="wrap">
+    <div class="hero-txt">
+      <h1>Trening personalny EMS w Łodzi z dojazdem do domu</h1>
+      <p>20 minut treningu całego ciała raz lub dwa razy w tygodniu. Trener przyjeżdża do Ciebie z kombinezonem i całym sprzętem.</p>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="#kontakt"><span>Umów trening<span class="lg"> próbny</span></span><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l5 5-5 5M7 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a>
+        <a class="btn btn-line" href="tel:+48729830460"><span class="lg">729 830 460</span><span class="sm">Zadzwoń</span></a>
+      </div>
+      <div class="hero-note">Trening próbny 100 zł, dojazd w Łodzi bez dopłaty</div>
+    </div>
+    <div class="hero-fig"><div class="fig-in">
+      <div class="ring" aria-hidden="true"></div>
+      <img src="img/hero-fig.webp" srcset="img/hero-fig-300.webp 300w, img/hero-fig.webp 400w" sizes="(max-width:900px) 200px, 400px" width="400" height="660" alt="Klientka w kombinezonie EMS z rękami uniesionymi w górę" fetchpriority="high">
+    </div></div>
+  </div>
+</section>
+
+<section id="trening">
+  <div class="wrap visit">
+    <div>
+      <h2>Trening przyjeżdża do Ciebie</h2>
+      <span class="h-wave" aria-hidden="true"></span>
+      <p class="lead" style="margin-top:22px">Nie tracisz czasu na dojazdy ani na zatłoczoną siłownię. Ćwiczysz u siebie, spokojnie i bez świadków, a trener przez cały czas pracuje tylko z Tobą.</p>
+      <ol class="steps">
+        <li><i>1</i><div><b>Wywiad i kwalifikacja</b><span>Pytamy o zdrowie, leki, kontuzje i cel, a przy przeciwwskazaniach odsyłamy najpierw do lekarza.</span></div></li>
+        <li><i>2</i><div><b>Dobór siły impulsu</b><span>Intensywność ustawiamy pod Ciebie i zmieniamy na bieżąco, jeśli coś jest niekomfortowe.</span></div></li>
+        <li><i>3</i><div><b>20-30 minut treningu 1:1</b><span>Cała wizyta z przygotowaniem trwa zwykle 45-60 minut.</span></div></li>
+        <li><i>4</i><div><b>Zalecenia na regenerację</b><span>Krótko omawiamy trening i plan kolejnych spotkań. Postępy sprawdzamy analizą składu ciała.</span></div></li>
+      </ol>
+      <div class="needs"><strong>Co przygotować?</strong>Bieliznę treningową (jeśli nie masz, przywieziemy), ręcznik i wodę. Gniazdko nie jest potrzebne.</div>
+    </div>
+    <div>
+      <div class="rail photos" data-rail>
+        <figure><img src="img/dom-salon.webp" width="768" height="512" alt="Trening EMS w salonie klientki pod okiem trenera" loading="lazy"><figcaption>Trening w salonie</figcaption></figure>
+        <figure><img src="img/dom-bieznia.webp" width="768" height="512" alt="Trener prowadzi trening EMS w mieszkaniu" loading="lazy"><figcaption>Przy domowej bieżni</figcaption></figure>
+        <figure><img src="img/ogrod-grupa.webp" width="768" height="512" alt="Trening EMS w ogrodzie z trenerem" loading="lazy"><figcaption>Latem także w ogrodzie</figcaption></figure>
+        <figure><img src="img/ogrod-trening.webp" width="768" height="512" alt="Dwie osoby trenują EMS na trawniku" loading="lazy"><figcaption>Trening w parze</figcaption></figure>
+        <figure><img src="img/dojazd.webp" width="600" height="599" alt="Trener Impulse Therapy ze sprzętem EMS w torbie" loading="lazy"><figcaption>Cały sprzęt mieści się w jednej torbie</figcaption></figure>
+      </div>
+      <div class="rail-ctl"><button type="button" data-prev aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 16 16"><path d="M10 2L4 8l6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button><button type="button" data-next aria-label="Następne zdjęcie"><svg viewBox="0 0 16 16"><path d="M6 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button></div>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Co możemy dla Ciebie zrobić</h2><span class="h-wave" aria-hidden="true"></span></div>
+      <div class="rail-ctl" data-for="cards"><button type="button" data-prev aria-label="Poprzednia usługa"><svg viewBox="0 0 16 16"><path d="M10 2L4 8l6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button><button type="button" data-next aria-label="Następna usługa"><svg viewBox="0 0 16 16"><path d="M6 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button></div>
+    </div>
+    <div class="rail cards" id="cards" data-rail>
+      <article class="card"><div class="card-img"><img src="img/trener-torba.webp" width="600" height="599" alt="Trener personalny EMS z dojazdem" loading="lazy"></div><div class="card-txt"><h3>Trening personalny EMS w domu</h3><p>Sześć głównych partii mięśni w jednym krótkim treningu, bez obciążania kręgosłupa. Pracujemy też w technologii DryTech, bez nawilżania kombinezonu.</p><a class="more" href="#cennik">Ceny pakietów <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div></article>
+      <article class="card"><div class="card-img cut"><img src="img/para.webp" width="472" height="700" alt="Para w kombinezonach EMS" loading="lazy"></div><div class="card-txt"><h3>Trening w parze</h3><p>Namów bliską osobę i ćwiczcie razem. Dla par mamy korzystniejsze pakiety, a dla trójek i większych grup duże zniżki.</p><a class="more" href="#kontakt">Zapytaj o pakiet dla dwojga <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div></article>
+      <article class="card"><div class="card-img cut"><img src="img/zabiegi.webp" width="450" height="527" alt="Zabiegi EMS modelujące sylwetkę" loading="lazy"></div><div class="card-txt"><h3>Zabiegi EMS na leżąco</h3><p>Modelowanie i ujędrnianie sylwetki, redukcja cellulitu i obrzęków. Zabiegi prowadzi Beata na urządzeniach XBody, również u Ciebie w domu.</p><a class="more" href="#kontakt">Umów konsultację <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div></article>
+      <article class="card"><div class="card-img"><img src="img/firmy.webp" width="648" height="363" alt="Trening EMS dla pracowników w biurze" loading="lazy"></div><div class="card-txt"><h3>EMS dla firm</h3><p>Pakiety treningów dla zespołu, w biurze albo w domu pracownika. Sposób na nagrodę dla najlepszych i mniej stresu w pracy.</p><a class="more" href="#kontakt">Zapytaj o ofertę dla firmy <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div></article>
+      <article class="card"><div class="card-img"><img src="img/szkolenia.webp" width="600" height="400" alt="Szkolenie na trenera EMS" loading="lazy"></div><div class="card-txt"><h3>Szkolenia na trenera EMS</h3><p>Dla trenerów personalnych, właścicieli siłowni i salonów oraz fizjoterapeutów. Od metodyki treningu po pozyskiwanie klientów i treningi w domach, z certyfikatem.</p><a class="more" href="#kontakt">Zapytaj o termin <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="cennik">
+  <div class="wrap price">
+    <div>
+      <h2>Cennik treningów</h2>
+      <span class="h-wave" aria-hidden="true"></span>
+      <p class="lead" style="margin-top:22px">Najlepiej zacząć od treningu próbnego: poznasz trenera, sprawdzisz, jak działa impuls, i razem ustalicie plan.</p>
+      <a class="btn btn-dark" href="#kontakt" style="margin-top:28px">Umów trening próbny <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l5 5-5 5M7 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a>
+    </div>
+    <div>
+      <div class="plist">
+        <div class="prow hl"><h3>Trening próbny (Intro)</h3><small>pierwsze spotkanie z kwalifikacją</small><span class="val">100 zł</span></div>
+        <div class="prow"><h3>Pojedynczy trening</h3><small>jedna sesja</small><span class="val">125-185 zł</span></div>
+        <div class="prow"><h3>Pakiet 4 treningów</h3><small>ważny 35 dni</small><span class="val">740 zł</span></div>
+        <div class="prow"><h3>Pakiet 12 treningów</h3><small>ważny 100 dni</small><span class="val">1 980 zł</span></div>
+        <div class="prow"><h3>Pakiety 24 i 48 treningów</h3><small>ważne 200 i 400 dni, pakiety roczne wybierane są najczęściej</small><span class="val">zapytaj</span></div>
+      </div>
+      <ul class="pnotes">
+        <li>Dojazd w Łodzi 0 zł, poza Łodzią zwykle 20-50 zł.</li>
+        <li>Możliwa płatność w ratach.</li>
+        <li>Niewykorzystany pakiet można przekazać innej osobie.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="zespol">
+  <div class="wrap">
+    <h2>Kto do Ciebie przyjedzie</h2>
+    <span class="h-wave" aria-hidden="true"></span>
+    <p class="lead" style="margin-top:22px">Certyfikowani trenerzy EMS, którzy przyjeżdżają do Ciebie z całym sprzętem i prowadzą trening od początku do końca.</p>
+    <div class="team-grid">
+      <div class="person"><div class="portrait"><img src="img/tomasz.webp" width="590" height="800" alt="Tomasz Bednarek, trener personalny EMS" loading="lazy"></div><div><h3>Tomasz Bednarek</h3><div class="role">Trener personalny EMS, założyciel</div><p>Certyfikowany trener personalny ze sportowym doświadczeniem, specjalista metody EMS. Prowadzi treningi i szkolenia dla trenerów. Po godzinach piłka nożna, sporty walki, bieganie na 10 km i rower w terenie.</p></div></div>
+      <div class="person"><div class="portrait"><img src="img/beata.webp" width="429" height="434" alt="Beata Makaruk, trenerka EMS" loading="lazy"></div><div><h3>Beata Makaruk</h3><div class="role">Trenerka EMS, zabiegi modelujące</div><p>Certyfikowana trenerka EMS, elektrostymulacją zajmuje się od 2019 roku. W zespole odpowiada za zabiegi modelujące sylwetkę na urządzeniach XBody. Lubi trening siłowy, bieganie i tenisa.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Co mówią klienci</h2><span class="h-wave" aria-hidden="true"></span></div>
+      <div class="rail-ctl" data-for="revs"><button type="button" data-prev aria-label="Poprzednia opinia"><svg viewBox="0 0 16 16"><path d="M10 2L4 8l6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button><button type="button" data-next aria-label="Następna opinia"><svg viewBox="0 0 16 16"><path d="M6 2l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button></div>
+    </div>
+    <div class="rail" id="revs" data-rail>
+      <blockquote class="rev"><div class="stars" aria-label="5 na 5">★★★★★</div><q>Na początku nie wierzyłem w skuteczność EMS. Już po 3 treningach czułem różnicę. Ćwiczę do dziś, prawie 6 miesięcy, a nie lubię ćwiczeń siłowych. Wielka w tym zasługa Tomka, który zna się na rzeczy.</q><cite>Piotr B.<span>opinia Google</span></cite></blockquote>
+      <blockquote class="rev"><div class="stars" aria-label="5 na 5">★★★★★</div><q>Zależało mi na aktywizacji mięśni głębokich, a na siłownię ciężko mi było się wybrać. Tutaj mam wszystko, na czym mi zależy. Cały trening jest wykonywany pod czujnym i profesjonalnym okiem.</q><cite>Agnieszka<span>klientka</span></cite></blockquote>
+      <blockquote class="rev"><div class="stars" aria-label="5 na 5">★★★★★</div><q>Super treningi, Pan Tomek bardzo miły i doświadczony trener. Duży plus, że robimy formę, nie ruszając się z domu.</q><cite>Edyta Wojewódzka<span>opinia Google</span></cite></blockquote>
+      <blockquote class="rev"><div class="stars" aria-label="5 na 5">★★★★★</div><q>Jestem bardzo zadowolona ze szkolenia. Ogrom wiedzy i fajne wskazówki odnośnie prowadzenia treningów i całego biznesu.</q><cite>Wiktoria Bęben<span>szkolenie EMS, opinia Google</span></cite></blockquote>
+      <blockquote class="rev"><div class="stars" aria-label="5 na 5">★★★★★</div><q>Najlepsze treningi, najlepszy trener. Ćwiczymy już długo. Trening = efekty, tutaj ta reguła jest nie do podważenia.</q><cite>Sandra Fabisiak<span>opinia Google</span></cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="dojazd">
+  <div class="wrap area-grid">
+    <div>
+      <h2>Dojeżdżamy w całej Łodzi i okolicy</h2>
+      <span class="h-wave" aria-hidden="true"></span>
+      <p class="lead" style="margin-top:22px">Całe miasto i miejscowości do ok. 10 km od granic Łodzi. Jeśli mieszkasz dalej, zasady dojazdu ustalimy indywidualnie.</p>
+      <ul class="towns">
+        <li class="main">Łódź</li><li>Zgierz</li><li>Aleksandrów Łódzki</li><li>Konstantynów Łódzki</li><li>Pabianice</li><li>Ksawerów</li><li>Rzgów</li><li>Tuszyn</li><li>Andrespol</li><li>Nowosolna</li>
+      </ul>
+      <p class="fee">W Łodzi dojazd 0 zł, poza miastem zwykle 20-50 zł.</p>
+    </div>
+    <div class="map" id="map"><button type="button" data-map>Pokaż mapę obszaru dojazdu</button></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div><h2>Najczęstsze pytania</h2><span class="h-wave" aria-hidden="true"></span></div>
+    <div>
+      <details><summary>Ile miejsca potrzebuję w domu?</summary><p>Wystarczy ok. 2 x 2 m wolnej przestrzeni. Dostęp do gniazdka nie jest potrzebny. Przy nietypowym mieszkaniu ustalimy ustawienie sprzętu przed wizytą.</p></details>
+      <details><summary>Czy muszę mieć własny sprzęt albo strój?</summary><p>Nie. Trener przyjeżdża z kompletnym sprzętem i kombinezonem EMS. Bieliznę treningową możemy zapewnić, jeśli będzie potrzebna.</p></details>
+      <details><summary>Jak często można trenować EMS?</summary><p>Najczęściej 1-2 treningi w tygodniu z przerwą na regenerację. Dokładny plan zależy od celu, historii treningowej i samopoczucia po sesji.</p></details>
+      <details><summary>Czy trening EMS jest bezpieczny?</summary><p>Tak, gdy prowadzi go trener. Intensywność dobieramy po kwalifikacji i korygujemy w trakcie. Przeciwwskazania to m.in. rozrusznik serca i niektóre implanty elektroniczne, wybrane choroby serca, ciąża i epilepsja. Przy wątpliwościach zalecamy konsultację lekarską.</p></details>
+      <details><summary>Czy po treningu są zakwasy?</summary><p>Mogą się pojawić, zwłaszcza na początku. Pomaga nawodnienie w dniu treningu i dzień po, sen i lżejszy następny dzień.</p></details>
+      <details><summary>Kiedy widać pierwsze efekty?</summary><p>Pierwsze odczucia pojawiają się szybko, a widoczne zmiany zależą od regularności, regeneracji, celu i stylu życia. Najlepiej działa stały plan.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Umów pierwszy trening</h2>
+      <p class="lead" style="margin-top:22px">Zadzwoń albo zostaw numer. Ustalimy termin, adres i cel treningu, a trener przyjedzie do Ciebie.</p>
+      <a class="tel" href="tel:+48729830460">729 830 460</a>
+      <a class="mail" href="mailto:kontakt@impulse-therapy.pl">kontakt@impulse-therapy.pl</a>
+    </div>
+    <form class="form" id="form" novalidate>
+      <div class="row">
+        <label>Imię<input type="text" name="imie" autocomplete="given-name"></label>
+        <label>Telefon<input type="tel" name="tel" autocomplete="tel"></label>
+      </div>
+      <div class="row">
+        <label>Miejscowość lub dzielnica<input type="text" name="miejsce"></label>
+        <label>Interesuje mnie<select name="cel"><option>Trening próbny</option><option>Pakiet treningów</option><option>Trening w parze</option><option>Zabiegi EMS</option><option>Oferta dla firmy</option><option>Szkolenie na trenera</option></select></label>
+      </div>
+      <label>Wiadomość (opcjonalnie)<textarea name="msg" placeholder="Np. cel treningu, dogodne dni"></textarea></label>
+      <button class="btn btn-dark" type="submit">Wyślij zgłoszenie</button>
+      <small>Odpowiadamy telefonicznie. Dane wykorzystamy tylko do kontaktu w sprawie treningu.</small>
+      <div class="form-ok" id="formOk" role="status">To podgląd strony. Na docelowej stronie zgłoszenie trafi od razu na Państwa skrzynkę.</div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><img src="img/logo-biale.png" width="291" height="95" alt="Impulse Therapy" loading="lazy"><p style="margin-top:14px;max-width:34ch">Mobilny trening personalny EMS z dojazdem do domu. Łódź i okolice.</p></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+48729830460">729 830 460</a></li><li><a href="mailto:kontakt@impulse-therapy.pl">kontakt@impulse-therapy.pl</a></li></ul></div>
+      <div><h4>Oferta</h4><ul><li><a href="#trening">Trening EMS w domu</a></li><li><a href="#oferta">Zabiegi EMS</a></li><li><a href="#oferta">Dla firm</a></li><li><a href="#oferta">Szkolenia</a></li></ul></div>
+      <div><h4>Obserwuj</h4><ul><li><a href="https://www.facebook.com/ImpulseTherapyEMS" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/impulse_trening_ems_lodz/" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/company/impulse-therapy-ems/" rel="noopener">LinkedIn</a></li><li><a href="https://www.tiktok.com/@impulse.therapy.ems" rel="noopener">TikTok</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Impulse Therapy. Polityka prywatności</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=impulse-therapy.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var top=document.getElementById('top'),b=document.getElementById('burger'),nav=document.getElementById('nav');
+  function sc(){top.classList.toggle('on',scrollY>20)}sc();addEventListener('scroll',sc,{passive:true});
+  b.addEventListener('click',function(){var o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu')});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))document.body.classList.remove('menu-open')});
+  document.querySelectorAll('[data-rail]').forEach(function(r){
+    var down=false,sx=0,sl=0,moved=false;
+    r.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=r.scrollLeft;r.classList.add('drag')});
+    addEventListener('pointermove',function(e){if(!down)return;var d=e.clientX-sx;if(Math.abs(d)>4)moved=true;r.scrollLeft=sl-d});
+    addEventListener('pointerup',function(){if(!down)return;down=false;r.classList.remove('drag')});
+    r.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false}},true);
+    var ctl=r.id?document.querySelector('[data-for="'+r.id+'"]'):r.nextElementSibling;
+    if(ctl&&ctl.classList.contains('rail-ctl')){
+      var step=function(){var c=r.firstElementChild;return c?c.getBoundingClientRect().width+16:300};
+      ctl.querySelector('[data-prev]').onclick=function(){r.scrollBy({left:-step(),behavior:'smooth'})};
+      ctl.querySelector('[data-next]').onclick=function(){r.scrollBy({left:step(),behavior:'smooth'})};
+    }
+  });
+  var m=document.querySelector('[data-map]');
+  function loadMap(){if(!m)return;var f=document.createElement('iframe');f.src='https://www.google.com/maps?q=%C5%81%C3%B3d%C5%BA&z=10&output=embed';f.title='Mapa obszaru dojazdu - Łódź i okolice';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';m.replaceWith(f);m=null}
+  m.addEventListener('click',loadMap);
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){loadMap();io.disconnect()}},{rootMargin:'200px'});io.observe(document.getElementById('map'))}
+  document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('formOk').style.display='block'});
+})();
+</script>
+</body>
+</html>
