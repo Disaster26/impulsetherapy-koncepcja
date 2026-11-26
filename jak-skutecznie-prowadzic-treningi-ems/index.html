@@ -654,6 +654,14 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 </footer>
 <script>
 (function(){
+  // kadry object-fit:cover - sizes wg faktycznej potrzebnej szerokosci, zeby zdjecie nie bylo powiekszane
+  function fit(){document.querySelectorAll('img[srcset]').forEach(function(im){
+    var r=im.getBoundingClientRect(),w=+im.getAttribute('width'),h=+im.getAttribute('height');
+    if(!r.width||!w||!h||getComputedStyle(im).objectFit!=='cover')return;
+    var need=Math.ceil(Math.max(r.width,r.height*w/h));if(need>r.width+2)im.sizes=need+'px';});}
+  fit();var ft;addEventListener('resize',function(){clearTimeout(ft);ft=setTimeout(fit,200)});
+})();
+(function(){
   var b=document.body,bur=document.querySelector('.burger'),nav=document.getElementById('nav');
   bur.addEventListener('click',function(){var o=b.classList.toggle('menu-open');bur.setAttribute('aria-expanded',o)});
   document.querySelectorAll('.dd>button').forEach(function(btn){btn.addEventListener('click',function(){var d=btn.parentNode,o=d.classList.toggle('open');btn.setAttribute('aria-expanded',o)})});
