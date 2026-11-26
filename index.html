@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow" data-podglad>
-<title>Suchy trening EMS z dojazdem w Łodzi, zabiegi EMS | Impulse Therapy</title>
-<meta name="description" content="Suchy trening EMS z trenerem personalnym i zabiegi EMS na ciało i twarz z dojazdem do domu w Łodzi i okolicach. Szkolenia na trenera EMS. Zapytaj o termin.">
+<title>Trening EMS z dojazdem Łódź, na sucho i na mokro | Impulse Therapy</title>
+<meta name="description" content="Trening EMS z trenerem personalnym na sucho lub na mokro i zabiegi EMS na ciało i twarz, z dojazdem do domu w Łodzi i okolicach. Szkolenia na trenera EMS.">
 <link rel="canonical" href="https://impulse-therapy.pl/">
 <meta property="og:type" content="website"><meta property="og:locale" content="pl_PL"><meta property="og:site_name" content="Impulse Therapy">
-<meta property="og:title" content="Suchy trening EMS z dojazdem w Łodzi, zabiegi EMS | Impulse Therapy"><meta property="og:description" content="Suchy trening EMS z trenerem personalnym i zabiegi EMS na ciało i twarz z dojazdem do domu w Łodzi i okolicach. Szkolenia na trenera EMS. Zapytaj o termin."><meta property="og:url" content="https://impulse-therapy.pl/"><meta property="og:image" content="https://impulse-therapy.pl/img/f/hero-dom-1440.webp">
+<meta property="og:title" content="Trening EMS z dojazdem Łódź, na sucho i na mokro | Impulse Therapy"><meta property="og:description" content="Trening EMS z trenerem personalnym na sucho lub na mokro i zabiegi EMS na ciało i twarz, z dojazdem do domu w Łodzi i okolicach. Szkolenia na trenera EMS."><meta property="og:url" content="https://impulse-therapy.pl/"><meta property="og:image" content="https://impulse-therapy.pl/img/f/hero-dom-1440.webp">
 <meta name="theme-color" content="#25313A">
 <link rel="icon" href="img/znak.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/lato900-rdzen.woff2" as="font" type="font/woff2" crossorigin>
@@ -86,8 +86,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 
 /* hero strony glownej */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;background:#1d1a17;overflow:hidden}
-.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
-.hero picture img{object-fit:cover;object-position:50% 40%}
+.hero picture{position:absolute;inset:var(--head) 0 0 0}
+.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 6%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,22,26,0) 30%,rgba(18,22,26,.62) 56%,rgba(18,22,26,.86) 100%)}
 .hero .wrap{position:relative;z-index:2;display:flex;justify-content:flex-end;padding:calc(var(--head) + 40px) 0 48px}
 .hero-txt{width:min(560px,40vw)}
@@ -145,6 +145,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .suit h3{text-transform:uppercase}
 .suit .tag{display:inline-block;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--or-d);margin-bottom:6px}
 .suit p{color:var(--muted);margin-top:8px;font-size:16px}
+.suit .tag.t-slate{color:var(--slate)}
+.suits-note{margin-top:26px;font-weight:700;color:var(--ink);max-width:70ch}
 
 /* sprzet */
 .gear{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:rgba(255,255,255,.08);margin-top:40px}
@@ -194,10 +196,28 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .dark .steps span{color:#C9D1D7}.dark .steps li::after{background:rgba(255,255,255,.14)}
 
 /* opinie */
-.ops{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.op{background:#fff;padding:30px 30px 28px;border-left:5px solid var(--or)}
-.op p{font-size:18px;font-weight:700;line-height:1.5}
-.op span{display:block;margin-top:16px;color:var(--muted);font-size:15px}
+.op-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
+.op-bar button{font:inherit;font-weight:900;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:10px 18px;border-radius:999px;border:2px solid var(--slate);background:transparent;color:var(--slate);cursor:pointer}
+.op-bar button[aria-pressed="true"]{background:var(--slate);color:#fff}
+.ops{display:flex;gap:20px;margin-top:30px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;align-items:flex-start}
+.ops::-webkit-scrollbar{display:none}
+.op{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;background:#fff;padding:28px 28px 26px;border-left:5px solid var(--or);display:flex;flex-direction:column}
+.sec:not(.grey) .op{background:var(--grey)}
+.op[hidden]{display:none}
+.op-k{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--or-d)}
+.op-t{margin-top:10px;flex:1}
+.op-t p{font-size:16.5px;line-height:1.6;color:var(--ink)}
+.op-t p{display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden}
+.op-t.open p{display:block}
+.op-more{margin-top:10px;border:0;background:none;font:inherit;font-weight:900;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--slate);cursor:pointer;padding:0;border-bottom:2px solid var(--or)}
+.op-a{display:block;margin-top:18px;color:var(--muted);font-size:14px}
+.op-a b{display:block;color:var(--ink);font-size:16px}
+.op-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:22px}
+.op-nav span{display:flex;gap:10px}
+.op-nav button{width:48px;height:48px;border-radius:50%;border:2px solid var(--slate);background:#fff;cursor:pointer;position:relative}
+.op-nav button::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;border:solid var(--slate);border-width:0 3px 3px 0;transform:translate(-65%,-50%) rotate(-45deg)}
+.op-nav .op-prev::after{transform:translate(-35%,-50%) rotate(135deg)}
+.op-nav button:hover{background:var(--slate)}.op-nav button:hover::after{border-color:#fff}
 
 /* galeria */
 .gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:40px;padding-bottom:10px;scrollbar-width:thin;cursor:grab;-webkit-overflow-scrolling:touch}
@@ -211,6 +231,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .person{display:grid;grid-template-columns:auto 1fr;align-items:end;background:var(--slate);color:#fff;border-radius:var(--r);overflow:hidden;min-height:330px}
 .person .ph{align-self:end;padding:24px 0 0 20px}
 .person .ph img{height:clamp(230px,21vw,300px);width:auto}
+.person .ph img.szer{width:min(340px,24vw);height:auto}
 .person .bd{padding:30px 30px 34px 22px;align-self:center}
 .person h3{font-size:clamp(22px,1.7vw,28px)}
 .person .role{display:block;color:var(--or);font-weight:900;text-transform:uppercase;font-size:14px;letter-spacing:.06em;margin-top:6px}
@@ -221,9 +242,15 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 
 /* partnerzy */
 .partners{background:var(--slate-2);color:#fff;padding:clamp(48px,5vw,80px) 0}
-.p-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:30px}
-.p-row div{background:#fff;width:200px;height:96px;display:flex;align-items:center;justify-content:center;padding:14px 18px;border-radius:var(--r)}
-.p-row img{max-height:62px;width:auto;object-fit:contain}
+.p-marq{overflow:hidden;margin-top:30px;padding:46px 0 8px;-webkit-mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.p-track{display:flex;gap:18px;width:max-content;animation:pmarq 30s linear infinite}
+.p-marq:hover .p-track,.p-marq:focus-within .p-track{animation-play-state:paused}
+@keyframes pmarq{to{transform:translateX(calc(-25% - 4.5px))}}
+.p-it{position:relative;flex:none;background:#fff;width:220px;height:100px;display:flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:var(--r);transition:transform .2s}
+.p-it img{max-height:64px;max-width:100%;width:auto;height:auto;object-fit:contain}
+a.p-it:hover{transform:translateY(-3px)}
+.p-it::after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 10px);transform:translate(-50%,6px);background:var(--or);color:var(--ink);font-weight:900;font-size:13px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;padding:6px 12px;border-radius:3px;opacity:0;pointer-events:none;transition:.18s}
+.p-it:hover::after,.p-it:focus-visible::after{opacity:1;transform:translate(-50%,0)}
 
 /* pas szkolen */
 .band{position:relative;color:#fff;background:var(--ink);overflow:hidden}
@@ -342,6 +369,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 
 @media (max-width:1180px){
   :root{--head:64px}
+  .team{grid-template-columns:1fr}
+  .person .ph img.szer{width:340px}
   .logo img{height:38px}
   .burger{display:block}
   .nav{position:fixed;top:var(--head);left:0;right:0;bottom:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 4vw 30px;overflow:auto;transform:translateX(100%);transition:transform .25s;visibility:hidden}
@@ -408,24 +437,26 @@ h3{font-size:clamp(20px,1.5vw,25px)}
   .person{grid-template-columns:1fr;min-height:0}
   .person .ph{padding:22px 0 0;justify-self:center}
   .person .ph img{height:230px}
+  .person .ph img.szer{width:min(300px,100%);height:auto}
   .person .bd{padding:22px 22px 28px}
   .form{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr;gap:22px 16px}
   .foot-grid>div:first-child{grid-column:1/-1}
-  .p-row div{width:calc(50% - 9px);height:84px}
+  .p-it{width:170px;height:84px}
+  .op{flex-basis:86%}
   .map{aspect-ratio:4/5}
   .towns{columns:2}
   .txt .acts .btn{width:100%}
   .prose{font-size:17px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.p-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}.p-track [aria-hidden="true"]{display:none}.p-marq{-webkit-mask:none;mask:none}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "@id": "https://impulse-therapy.pl/#firma", "name": "Impulse Therapy", "legalName": "IMPULSE THERAPY sp. z o.o.", "url": "https://impulse-therapy.pl/", "logo": "https://impulse-therapy.pl/img/logo.png", "image": "https://impulse-therapy.pl/img/f/hero-dom-1440.webp", "telephone": "+48729830460", "email": "kontakt@impulse-therapy.pl", "description": "Suchy trening EMS z trenerem personalnym i zabiegi EMS na ciało i twarz z dojazdem do domu w Łodzi i okolicach. Szkolenia na trenera EMS.", "address": {"@type": "PostalAddress", "streetAddress": "ul. Leszka Białego 4 lok. 6", "postalCode": "92-414", "addressLocality": "Łódź", "addressCountry": "PL"}, "areaServed": ["Łódź", "Zgierz", "Aleksandrów Łódzki", "Konstantynów Łódzki", "Pabianice", "Rzgów", "Tuszyn", "Nowosolna", "Andrespol"], "sameAs": ["https://www.facebook.com/ImpulseTherapyEMS", "https://www.instagram.com/impulse_trening_ems_lodz/", "https://www.tiktok.com/@impulse.therapy.ems", "https://www.linkedin.com/company/impulse-therapy-ems/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "@id": "https://impulse-therapy.pl/#firma", "name": "Impulse Therapy", "legalName": "IMPULSE THERAPY sp. z o.o.", "url": "https://impulse-therapy.pl/", "logo": "https://impulse-therapy.pl/img/logo.png", "image": "https://impulse-therapy.pl/img/f/hero-dom-1440.webp", "telephone": "+48729830460", "email": "kontakt@impulse-therapy.pl", "description": "Trening EMS z trenerem personalnym w technologii suchej lub mokrej oraz zabiegi EMS na ciało i twarz, z dojazdem do domu w Łodzi i okolicach. Szkolenia na trenera EMS.", "address": {"@type": "PostalAddress", "streetAddress": "ul. Leszka Białego 4 lok. 6", "postalCode": "92-414", "addressLocality": "Łódź", "addressCountry": "PL"}, "areaServed": ["Łódź", "Zgierz", "Aleksandrów Łódzki", "Konstantynów Łódzki", "Pabianice", "Rzgów", "Tuszyn", "Nowosolna", "Andrespol"], "sameAs": ["https://www.facebook.com/ImpulseTherapyEMS", "https://www.instagram.com/impulse_trening_ems_lodz/", "https://www.tiktok.com/@impulse.therapy.ems", "https://www.linkedin.com/company/impulse-therapy-ems/"]}</script>
 </head>
 <body>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="" aria-label="Impulse Therapy, strona główna"><img src="img/logo.png" width="291" height="95" alt="Impulse Therapy"></a>
+    <a class="logo" href="" aria-label="Impulse Therapy, strona główna"><img src="img/logo.png" width="450" height="150" alt="Impulse Therapy"></a>
     <nav class="nav" id="nav" aria-label="Menu główne"><div class="dd"><a href="trening-ems-z-dojazdem/">Trening EMS</a><button type="button" aria-expanded="false" aria-label="Rozwiń: Trening EMS"></button><div class="dd-menu"><a href="trening-ems-z-dojazdem/">Trening EMS z dojazdem</a><a href="obszar-dojazdu/">Obszar dojazdu</a><a href="pytania/">Pytania i odpowiedzi</a></div></div><div class="dd"><a href="zabiegi/">Zabiegi</a><button type="button" aria-expanded="false" aria-label="Rozwiń: Zabiegi"></button><div class="dd-menu"><a href="zabiegi/modelowanie-sylwetki/">Modelowanie sylwetki</a><a href="zabiegi/ems-twarzy/">EMS twarzy</a><a href="zabiegi/redukcja-cellulitu/">Redukcja cellulitu</a><a href="zabiegi/leczenie-bolu-plecow/">Leczenie bólu pleców</a><a href="zabiegi/mobilnosc/">Mobilność</a></div></div><a href="szkolenia-ems/">Szkolenia</a><a href="poradnik-ems/">Poradnik</a><a href="o-nas/">O nas</a><a href="kontakt/">Kontakt</a><a class="btn btn-or" href="#zapytanie">Zapytaj o termin</a></nav>
     <button class="burger" type="button" aria-label="Otwórz menu" aria-controls="nav" aria-expanded="false"><span></span></button>
   </div>
@@ -439,11 +470,11 @@ h3{font-size:clamp(20px,1.5vw,25px)}
   </picture>
   <div class="wrap">
     <div class="hero-txt">
-      <span class="kick">Trening na sucho</span>
-      <h1>Suchy trening EMS z dojazdem do domu w Łodzi</h1>
-      <p class="lead">Trener przyjeżdża do Ciebie z całym sprzętem. 20 minut treningu całego ciała w suchym stroju Dry Suit, bez moczenia kombinezonu. Wykonujemy też zabiegi EMS na ciało i twarz.</p>
+      <span class="kick">Na sucho lub na mokro</span>
+      <h1>Trening EMS z dojazdem do domu w Łodzi</h1>
+      <p class="lead">Trener personalny przyjeżdża do Ciebie ze sprzętem. 20 minut treningu całego ciała w technologii suchej albo mokrej, to Ty wybierasz. Wykonujemy też zabiegi EMS na ciało i twarz.</p>
       <div class="hero-cta"><a class="btn btn-or" href="#zapytanie" data-temat="Trening próbny">Umów trening</a><a class="btn btn-ghost" href="tel:+48729830460">729 830 460</a></div>
-      <ul class="hero-pts"><li>20 minut</li><li>Trener 1:1 z tabletem</li><li>Łódź i okolice</li></ul>
+      <ul class="hero-pts"><li>20 minut</li><li>Na sucho lub na mokro</li><li>Trener 1:1 z tabletem</li><li>Łódź i okolice</li></ul>
     </div>
   </div>
 </section>
@@ -453,7 +484,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
     <h2>Czego szukasz?</h2><span class="bar"></span>
     <p class="lead">Trenujemy i wykonujemy zabiegi u klientów w domu, w Łodzi i okolicach. Szkolimy też przyszłych trenerów EMS.</p>
     <div class="tiles">
-      <a class="tile" href="trening-ems-z-dojazdem/"><span class="lab c-or">Suchy trening EMS</span><div class="ph"><img src="img/f/trening-dom-1200.webp" srcset="img/f/trening-dom-800.webp 800w, img/f/trening-dom-1200.webp 1200w, img/f/trening-dom-1600.webp 1600w, img/f/trening-dom-2200.webp 2200w, img/f/trening-dom-2560.webp 2560w" sizes="(max-width:1180px) 46vw, 23vw" width="2560" height="1706" alt="Trener z tabletem prowadzi trening EMS w salonie klientki" style="object-position:62% 50%" loading="lazy" decoding="async"><span>Trening personalny <b>z dojazdem do Ciebie</b></span></div></a>
+      <a class="tile" href="trening-ems-z-dojazdem/"><span class="lab c-or">Trening EMS</span><div class="ph"><img src="img/f/trening-dom-1200.webp" srcset="img/f/trening-dom-800.webp 800w, img/f/trening-dom-1200.webp 1200w, img/f/trening-dom-1600.webp 1600w, img/f/trening-dom-2200.webp 2200w, img/f/trening-dom-2560.webp 2560w" sizes="(max-width:1180px) 46vw, 23vw" width="2560" height="1706" alt="Trener z tabletem prowadzi trening EMS w salonie klientki" style="object-position:62% 50%" loading="lazy" decoding="async"><span>Trening personalny <b>z dojazdem do Ciebie</b></span></div></a>
       <a class="tile" href="zabiegi/"><span class="lab c-slate">Zabiegi na ciało</span><div class="ph"><img src="img/f/lezenie-1200.webp" srcset="img/f/lezenie-800.webp 800w, img/f/lezenie-1200.webp 1200w, img/f/lezenie-1600.webp 1600w, img/f/lezenie-2200.webp 2200w, img/f/lezenie-2560.webp 2560w" sizes="(max-width:1180px) 46vw, 23vw" width="2560" height="1502" alt="Zabieg EMS na leżąco w suchym stroju" style="object-position:60% 50%" loading="lazy" decoding="async"><span>Zabiegi EMS na leżąco <b>modelowanie, cellulit, plecy</b></span></div></a>
       <a class="tile" href="zabiegi/ems-twarzy/"><span class="lab c-red">Face EMS</span><div class="ph"><img src="img/twarz-dom.webp" width="720" height="480" alt="Zabieg EMS twarzy w domu klientki" style="object-position:30% 50%" loading="lazy" decoding="async"><span>Naturalny lifting <b>bez skalpela</b></span></div></a>
       <a class="tile" href="szkolenia-ems/"><span class="lab c-ink">Szkolenia</span><div class="ph"><img src="img/f/grupa-trenerow-1200.webp" srcset="img/f/grupa-trenerow-800.webp 800w, img/f/grupa-trenerow-1200.webp 1200w, img/f/grupa-trenerow-1600.webp 1600w, img/f/grupa-trenerow-2560.webp 2560w" sizes="(max-width:1180px) 46vw, 23vw" width="2560" height="1707" alt="Trenerzy EMS w suchych kombinezonach" style="object-position:50% 40%" loading="lazy" decoding="async"><span>Zostań <b>trenerem EMS</b></span></div></a>
@@ -461,21 +492,22 @@ h3{font-size:clamp(20px,1.5vw,25px)}
   </div>
 </section>
 
-<section class="sec grey" id="na-sucho">
+<section class="sec grey" id="stroje">
   <div class="wrap">
     <div class="split wide">
       <div class="txt">
-        <h2>Trenujemy na sucho</h2><span class="bar"></span>
-        <p class="big">Standardowy trening EMS wymaga zwilżenia elektrod wodą. My stawiamy na suchą technologię.</p>
-        <p>Zakładasz strój na sucho, bez zimnych, mokrych elektrod na skórze. Trening zaczyna się szybciej, a Ty czujesz się komfortowo od pierwszej minuty. Dobieramy strój do Ciebie i do celu treningu, w tej kolejności:</p>
+        <h2>Na sucho czy na mokro? Ty wybierasz</h2><span class="bar"></span>
+        <p class="big">Trenujemy w obu technologiach: około 70% naszych treningów odbywa się na sucho, a 30% na mokro. Wybór należy do Ciebie.</p>
+        <p>Na początku pokazujemy i testujemy z Tobą obie wersje, w każdej możesz ćwiczyć wielokrotnie. Technologia sucha to większy wydatek na start, ale też więcej wygody, mokra to najprostszy początek. Gdy zdecydujesz, kupujesz własny strój. Do wyboru masz trzy opcje:</p>
       </div>
       <div></div>
     </div>
     <div class="suits">
-  <article class="suit top1"><span class="no">1</span><div class="ph"><img src="img/f/dry-suit-720.webp" srcset="img/f/dry-suit-480.webp 480w, img/f/dry-suit-720.webp 720w, img/f/dry-suit-960.webp 960w" sizes="(max-width:900px) 92vw, 36vw" width="960" height="1296" alt="Dry Suit, suchy kombinezon EMS z czarnym nadajnikiem" loading="lazy" decoding="async"></div><div class="bd"><span class="tag">Nasz wybór numer 1</span><h3>Dry Suit</h3><p>Suchy kombinezon EMS na całe ciało. Zakładasz go jak zwykłą odzież sportową, bez moczenia elektrod wodą. Elektrody są wszyte w materiał, a impuls dociera do wszystkich głównych partii mięśni.</p></div></article>
-  <article class="suit"><span class="no">2</span><div class="ph"><img src="img/f/dry-wear-720.webp" srcset="img/f/dry-wear-480.webp 480w, img/f/dry-wear-720.webp 720w, img/f/dry-wear-960.webp 960w, img/f/dry-wear-1400.webp 1400w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 28vw" width="1400" height="1541" alt="Sucha bielizna Dry Wear do treningu EMS" loading="lazy" decoding="async"></div><div class="bd"><h3>Dry Wear</h3><p>Sucha bielizna z elektrodami. Lekka i dopasowana, sprawdza się w treningu i w zabiegach na leżąco.</p></div></article>
-  <article class="suit"><span class="no">3</span><div class="ph"><img src="img/f/kamizelka-960.webp" srcset="img/f/kamizelka-640.webp 640w, img/f/kamizelka-960.webp 960w, img/f/kamizelka-1280.webp 1280w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 28vw" width="1280" height="898" alt="Trener z tabletem i klientka w kamizelce EMS" style="object-position:72% 30%" loading="lazy" decoding="async"></div><div class="bd"><h3>Kamizelka EMS</h3><p>Klasyczna kamizelka z pasami na ręce i nogi. Używamy jej, gdy trening tego wymaga.</p></div></article>
+  <article class="suit top1"><span class="no">1</span><div class="ph"><img src="img/f/dry-suit-720.webp" srcset="img/f/dry-suit-480.webp 480w, img/f/dry-suit-720.webp 720w, img/f/dry-suit-960.webp 960w" sizes="(max-width:900px) 92vw, 36vw" width="960" height="1296" alt="Dry Suit, suchy kombinezon EMS z czarnym nadajnikiem" loading="lazy" decoding="async"></div><div class="bd"><span class="tag">Technologia sucha, bez kamizelki</span><h3>Suchy kombinezon Dry Suit</h3><p>Kombinezon EMS z elektrodami wszytymi w materiał. Zakładasz go jak zwykłą odzież sportową, bez moczenia wodą. Zastępuje kamizelkę i pasy, więc to najwygodniejsza opcja: ubierasz się i od razu zaczynasz trening.</p></div></article>
+  <article class="suit"><span class="no">2</span><div class="ph"><img src="img/f/dry-wear-720.webp" srcset="img/f/dry-wear-480.webp 480w, img/f/dry-wear-720.webp 720w, img/f/dry-wear-960.webp 960w, img/f/dry-wear-1400.webp 1400w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 28vw" width="1400" height="1541" alt="Sucha bielizna Dry Wear do treningu EMS" loading="lazy" decoding="async"></div><div class="bd"><span class="tag t-slate">Technologia sucha</span><h3>Sucha bielizna Dry Wear</h3><p>Sucha bielizna treningowa, którą zakładasz pod kamizelkę EMS. Bez moczenia elektrod. Kamizelkę i pasy zapewniamy my.</p></div></article>
+  <article class="suit"><span class="no">3</span><div class="ph"><img src="img/f/kamizelka-960.webp" srcset="img/f/kamizelka-640.webp 640w, img/f/kamizelka-960.webp 960w, img/f/kamizelka-1280.webp 1280w" sizes="(max-width:600px) 92vw, (max-width:900px) 46vw, 28vw" width="1280" height="898" alt="Klientka w kamizelce EMS i trener z tabletem" style="object-position:72% 30%" loading="lazy" decoding="async"></div><div class="bd"><span class="tag t-slate">Technologia mokra</span><h3>Bielizna do treningu na mokro</h3><p>Klasyczna bielizna EMS, przed treningiem zwilżana wodą. Na nią zakładasz kamizelkę i pasy, które zapewniamy my. Najprostszy sposób, żeby zacząć.</p></div></article>
 </div>
+<p class="suits-note">Strój kupujesz na własność, zostaje u Ciebie i służy tylko Tobie. Nie wiesz, który wybrać? Na treningu próbnym doradzimy, a każdą wersję możesz przetestować.</p>
   </div>
 </section>
 
@@ -492,7 +524,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
     <div class="gear">
   <div><b>Czarny nadajnik przy stroju</b><span>Mały, bezprzewodowy nadajnik przypięty do stroju. Żadnych kabli, pełna swoboda ruchu w salonie, ogrodzie czy biurze.</span></div>
   <div><b>Trener z tabletem w ręku</b><span>Trener steruje impulsami z tabletu, stojąc obok Ciebie. Na bieżąco dobiera natężenie dla każdej partii mięśni.</span></div>
-  <div><b>Cały sprzęt przyjeżdża z nami</b><span>Nie potrzebujesz własnego sprzętu. Wystarczy około 2 x 2 metry wolnej podłogi.</span></div>
+  <div><b>Sprzęt przyjeżdża z nami</b><span>Nadajnik, tablet, kamizelki i matę przywozimy. Ty potrzebujesz tylko swojego stroju i około 2 x 2 metry wolnej podłogi.</span></div>
 </div>
   </div>
 </section>
@@ -536,8 +568,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
   <div class="wrap">
     <div class="center"><h2>Jak wygląda wizyta trenera</h2><span class="bar"></span><p class="lead">My zajmujemy się sprzętem, Ty zadbaj tylko o swoje ciało.</p></div>
     <ol class="steps">
-  <li><b>Dojazd</b><span>Trener przyjeżdża pod wskazany adres ze sprzętem i strojami.</span></li>
-  <li><b>Przygotowanie</b><span>Zakładasz suchy strój: Dry Suit albo bieliznę Dry Wear.</span></li>
+  <li><b>Dojazd</b><span>Trener przyjeżdża pod wskazany adres ze sprzętem, a na pierwsze treningi także ze strojami do przetestowania.</span></li>
+  <li><b>Przygotowanie</b><span>Zakładasz swój strój: kombinezon Dry Suit albo bieliznę (suchą Dry Wear lub zwilżoną) z kamizelką.</span></li>
   <li><b>Kalibracja</b><span>Dobieramy natężenie impulsów indywidualnie dla Ciebie.</span></li>
   <li><b>Trening 20 minut</b><span>Ćwiczenia pod Twój cel: redukcja, siła, zdrowy kręgosłup.</span></li>
   <li><b>Regeneracja</b><span>Na koniec masaż impulsowy, który rozluźnia mięśnie.</span></li>
@@ -547,12 +579,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 
 <section class="sec">
   <div class="wrap">
-    <div class="center"><h2>Opinie klientów</h2><span class="bar"></span></div>
-    <div class="ops">
-  <div class="op"><p>„Trening z Tomkiem to profesjonalizm i ogromna wiedza o EMS. Polecam każdemu, kto szuka skutecznego treningu bez wychodzenia z domu.”</p><span>Robert Kubiak</span></div>
-  <div class="op"><p>„Dzięki treningom EMS z Tomkiem zrzuciłam kilka kilogramów i znacząco zmniejszyłam ilość tkanki tłuszczowej. Super wygoda z dojazdem!”</p><span>Jolanta Pustelnik</span></div>
-  <div class="op"><p>„Trening z Tomkiem to inwestycja w dobre samopoczucie. Profesjonalne podejście i ogromne doświadczenie.”</p><span>Agata Czernik</span></div>
-</div>
+    <div class="center"><h2>Opinie klientów</h2><span class="bar"></span><p class="lead">Najwięcej opinii dostajemy po szkoleniach EMS. Przełącz, żeby zobaczyć też opinie o treningach.</p></div>
+    <div class="opw"><div class="op-bar" role="group" aria-label="Filtr opinii"><button type="button" data-k="szkolenia" aria-pressed="true">Szkolenia (4)</button><button type="button" data-k="treningi" aria-pressed="false">Treningi (9)</button><button type="button" data-k="all" aria-pressed="false">Wszystkie</button></div><div class="ops" tabindex="0" aria-label="Opinie klientów"><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Jestem bardzo zadowolona ze szkolenia! Ogrom wiedzy, fajne wskazówki odnośnie prowadzenia treningów i ogólnie całego biznesu. Na każdym etapie dało się odczuć, że wszystko jest poparte latami doświadczenia 💪🏼 bardzo polecam!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Wiktoria Bęben</b>Opinia z Google · 15.01.2024</span></article><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Szkolenie EMS -  dynamika, świetny trener i solidna dawka unikalnej wiedzy.<br>Szkolenie EMS było znakomite. Całościowo zaspokoiło moje oczekiwania.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Malwina Grzelczyk</b>Opinia z Google · 06.12.2023</span></article><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Ukończyłam zaawansowane szkolenie- kompleksowe wykorzystanie elektrostymulacji mięśni EMS w treningu personalnym. Dużo przydatnej oraz ciekawej wiedzy praktycznej jak i teoretycznej. Polecam serdecznie 💪</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Dorota Zaczkowska</b>Opinia z Google · 04.12.2023</span></article><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Polecam każdemu! Jestem po szkoleniu na trenera EMS u Tomka i jestem zachwycona! Tomek to profesjonalista w każdym calu. Jego ogromna wiedza, pasja i zaangażowanie sprawiają, że człowiek z miejsca chce ruszyć w świat i zarażać kolejnych ludzi zamiłowaniem do treningów EMS. Jeśli ktoś wątpi w skuteczność tych treningów to zapraszam do Tomka. Po jednym treningu z nim, zmienicie zdanie 😄<br>Dziękuję Tomek za wiedzę którą się ze mną podzieliłeś i za trening 🙂 Do zobaczenia 😀</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Beata Cimcioch</b>Opinia z Google · 13.08.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Polecam!!! Super treningi Pan Tomek bardzo miły i doświadczony trener jestem mega zadowolona i zachęcam do ćwiczeń. Duży też plus że<br>robimy formę  nie ruszając się z domu.:-)</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Edyta Wojewódzka</b>Opinia z Google · 15.01.2024</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Polecam<br>Ćwiczymy z mężem od 3 miesięcy dostrzegam same zalety.Po pierwsze minął ból kręgosłupa który straszne utrudniał funkcjonowanie.Po drugie treningi odbywają się w domu niesamowity komfort.<br>A najważniejsze:<br>trener Tomasz który niesamowicie jest zaangażowany w swoją pracę ,zna się na tym co robi i treningi  przebiegają w bardzo miłej atmosferze.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Donata Korzycka</b>Opinia z Google · 17.11.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Bardzo polecam treningi z Tomkiem, jest bardzo miły, uczciwy i nie obiecuje Bóg wie czego, po prostu mówi jak jest co mi bardzo odpowiada. Ma świetne podejście do osób które nie mają żadnego doczynienia ze sportem, spokojnie wszutko tłumaczy ale daje wycisk i nie oszczędza  😀.<br>Na każdy Trening przyjeżdża punktualnie a w razie spozienia zawsze informuje.<br>Przykro mi, że z powodu choroby nie mogę kontynuować treningów ale wszystkim polecam z całego serca ❤️</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Iwona Sikora</b>Opinia z Google · 06.11.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Najlepsze treningi najlepszy trener Tomek.<br>Osoba z ogromnym zaangażowaniem po prostu uwielbiam!!<br>Ćwiczymy już długo wiec do końca świata i jeden dzień dłużej 😂<br>Trening= efekty tutaj ta reguła jest nie do podważenia 🩷</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Sandra Fabisiak</b>Opinia z Google · 06.10.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Na początku nie wierzyłem w skuteczność EMS. Przypadek sprawił, że spróbowałem. Już po 3 treningach czułem różnice. Tak jakby moje ciało przestało być „rozklekotane”. Ćwiczę do dziś już prawie 6mcy. A nie lubię ćwiczeń siłowych. Wielka w tym zasługa Tomka, który zna się na rzeczy. Potrafi zmotywować. Potrafi „pocisnąć” na maksa. I widać tego efekty. Z czystym sumieniem polecam!!!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Piotr B.</b>Opinia z Google · 28.09.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Trening ciężki ale po paru miesiącach naprawdę czuć efekty!<br>W końcu nie dostaję zadyszki wchodzą w pracy po schodach i czuję mięśnie o których nawet nie wiedziałem!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Juliusz Rembowski</b>Opinia z Google · 01.09.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Trening z Tomkiem to profesjonalizm i ogromna wiedza o EMS. Polecam każdemu, kto szuka skutecznego treningu bez wychodzenia z domu.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Robert Kubiak</b>Opinia klienta</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Dzięki treningom EMS z Tomkiem zrzuciłam kilka kilogramów i znacząco zmniejszyłam ilość tkanki tłuszczowej. Super wygoda z dojazdem!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Jolanta Pustelnik</b>Opinia klienta</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Trening z Tomkiem to inwestycja w dobre samopoczucie. Profesjonalne podejście i ogromne doświadczenie.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Agata Czernik</b>Opinia klienta</span></article></div><div class="op-nav"><a class="more" href="https://www.google.com/maps/search/?api=1&amp;query=IMPULSE+THERAPY+Trening+EMS+%C5%81%C3%B3d%C5%BA" target="_blank" rel="noopener">Wszystkie opinie w Google</a><span><button type="button" class="op-prev" aria-label="Poprzednie opinie"></button><button type="button" class="op-next" aria-label="Następne opinie"></button></span></div></div>
   </div>
 </section>
 
@@ -565,13 +593,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
   </div>
 </section>
 
-<section class="partners center"><div class="wrap"><h2>Partnerzy</h2><div class="p-row">
-  <div><img src="img/p-xbody.png" width="360" height="117" alt="XBody" loading="lazy"></div>
-  <div><img src="img/p-gnesis.png" width="360" height="114" alt="Gnesis EMS" loading="lazy"></div>
-  <div><img src="img/p-katalogmarzen.webp" width="200" height="85" alt="Katalog Marzeń" loading="lazy"></div>
-  <div><img src="img/p-wyjatkowyprezent.webp" width="200" height="85" alt="Wyjątkowy Prezent" loading="lazy"></div>
-  <div><img src="img/p-miodek.webp" width="200" height="85" alt="Miodek" loading="lazy"></div>
-</div></div></section>
+<section class="partners center"><div class="wrap"><h2>Partnerzy</h2></div><div class="p-marq"><div class="p-track"><a class="p-it" href="https://kiwievent.pl/" target="_blank" rel="noopener" data-tip="Kiwi Event"><img src="img/p-kiwievent.webp" width="480" height="89" alt="Kiwi Event" loading="lazy"></a><a class="p-it" href="https://xbodyworld.com/" target="_blank" rel="noopener" data-tip="XBody"><img src="img/p-xbody.png" width="360" height="117" alt="XBody" loading="lazy"></a><span class="p-it" data-tip="Gnesis EMS"><img src="img/p-gnesis.png" width="360" height="114" alt="Gnesis EMS" loading="lazy"></span><a class="p-it" href="https://katalogmarzen.pl/" target="_blank" rel="noopener" data-tip="Katalog Marzeń"><img src="img/p-katalogmarzen.webp" width="200" height="85" alt="Katalog Marzeń" loading="lazy"></a><a class="p-it" href="https://www.wyjatkowyprezent.pl/" target="_blank" rel="noopener" data-tip="Wyjątkowy Prezent"><img src="img/p-wyjatkowyprezent.webp" width="200" height="85" alt="Wyjątkowy Prezent" loading="lazy"></a><span class="p-it" data-tip="Miodek Estetyka"><img src="img/p-miodek.webp" width="200" height="85" alt="Miodek Estetyka" loading="lazy"></span><a class="p-it" href="https://kiwievent.pl/" target="_blank" rel="noopener" data-tip="Kiwi Event" aria-hidden="true" tabindex="-1"><img src="img/p-kiwievent.webp" width="480" height="89" alt="" loading="lazy"></a><a class="p-it" href="https://xbodyworld.com/" target="_blank" rel="noopener" data-tip="XBody" aria-hidden="true" tabindex="-1"><img src="img/p-xbody.png" width="360" height="117" alt="" loading="lazy"></a><span class="p-it" data-tip="Gnesis EMS" aria-hidden="true"><img src="img/p-gnesis.png" width="360" height="114" alt="" loading="lazy"></span><a class="p-it" href="https://katalogmarzen.pl/" target="_blank" rel="noopener" data-tip="Katalog Marzeń" aria-hidden="true" tabindex="-1"><img src="img/p-katalogmarzen.webp" width="200" height="85" alt="" loading="lazy"></a><a class="p-it" href="https://www.wyjatkowyprezent.pl/" target="_blank" rel="noopener" data-tip="Wyjątkowy Prezent" aria-hidden="true" tabindex="-1"><img src="img/p-wyjatkowyprezent.webp" width="200" height="85" alt="" loading="lazy"></a><span class="p-it" data-tip="Miodek Estetyka" aria-hidden="true"><img src="img/p-miodek.webp" width="200" height="85" alt="" loading="lazy"></span><a class="p-it" href="https://kiwievent.pl/" target="_blank" rel="noopener" data-tip="Kiwi Event" aria-hidden="true" tabindex="-1"><img src="img/p-kiwievent.webp" width="480" height="89" alt="" loading="lazy"></a><a class="p-it" href="https://xbodyworld.com/" target="_blank" rel="noopener" data-tip="XBody" aria-hidden="true" tabindex="-1"><img src="img/p-xbody.png" width="360" height="117" alt="" loading="lazy"></a><span class="p-it" data-tip="Gnesis EMS" aria-hidden="true"><img src="img/p-gnesis.png" width="360" height="114" alt="" loading="lazy"></span><a class="p-it" href="https://katalogmarzen.pl/" target="_blank" rel="noopener" data-tip="Katalog Marzeń" aria-hidden="true" tabindex="-1"><img src="img/p-katalogmarzen.webp" width="200" height="85" alt="" loading="lazy"></a><a class="p-it" href="https://www.wyjatkowyprezent.pl/" target="_blank" rel="noopener" data-tip="Wyjątkowy Prezent" aria-hidden="true" tabindex="-1"><img src="img/p-wyjatkowyprezent.webp" width="200" height="85" alt="" loading="lazy"></a><span class="p-it" data-tip="Miodek Estetyka" aria-hidden="true"><img src="img/p-miodek.webp" width="200" height="85" alt="" loading="lazy"></span><a class="p-it" href="https://kiwievent.pl/" target="_blank" rel="noopener" data-tip="Kiwi Event" aria-hidden="true" tabindex="-1"><img src="img/p-kiwievent.webp" width="480" height="89" alt="" loading="lazy"></a><a class="p-it" href="https://xbodyworld.com/" target="_blank" rel="noopener" data-tip="XBody" aria-hidden="true" tabindex="-1"><img src="img/p-xbody.png" width="360" height="117" alt="" loading="lazy"></a><span class="p-it" data-tip="Gnesis EMS" aria-hidden="true"><img src="img/p-gnesis.png" width="360" height="114" alt="" loading="lazy"></span><a class="p-it" href="https://katalogmarzen.pl/" target="_blank" rel="noopener" data-tip="Katalog Marzeń" aria-hidden="true" tabindex="-1"><img src="img/p-katalogmarzen.webp" width="200" height="85" alt="" loading="lazy"></a><a class="p-it" href="https://www.wyjatkowyprezent.pl/" target="_blank" rel="noopener" data-tip="Wyjątkowy Prezent" aria-hidden="true" tabindex="-1"><img src="img/p-wyjatkowyprezent.webp" width="200" height="85" alt="" loading="lazy"></a><span class="p-it" data-tip="Miodek Estetyka" aria-hidden="true"><img src="img/p-miodek.webp" width="200" height="85" alt="" loading="lazy"></span></div></div></section>
 
 <section class="kontakt" id="zapytanie">
   <div class="k-grid">
@@ -597,7 +619,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
-      <div><img src="img/logo-biale.png" width="291" height="95" alt="Impulse Therapy" loading="lazy"><p style="margin-top:14px">Suchy trening EMS i zabiegi EMS z dojazdem do domu. Łódź i okolice.</p>
+      <div><img src="img/logo-biale.png" width="291" height="95" alt="Impulse Therapy" loading="lazy"><p style="margin-top:14px">Trening EMS na sucho i na mokro oraz zabiegi EMS z dojazdem do domu. Łódź i okolice.</p>
         <div class="soc"><a href="https://www.facebook.com/ImpulseTherapyEMS" rel="noopener" target="_blank" aria-label="Facebook">FB</a><a href="https://www.instagram.com/impulse_trening_ems_lodz/" rel="noopener" target="_blank" aria-label="Instagram">IG</a><a href="https://www.tiktok.com/@impulse.therapy.ems" rel="noopener" target="_blank" aria-label="TikTok">TT</a><a href="https://www.linkedin.com/company/impulse-therapy-ems/" rel="noopener" target="_blank" aria-label="LinkedIn">IN</a></div></div>
       <div><h4>Trening</h4><ul><li><a href="trening-ems-z-dojazdem/">Trening EMS z dojazdem</a></li><li><a href="obszar-dojazdu/">Obszar dojazdu</a></li><li><a href="szkolenia-ems/">Szkolenia EMS</a></li><li><a href="pytania/">Pytania i odpowiedzi</a></li><li><a href="poradnik-ems/">Poradnik</a></li></ul></div>
       <div><h4>Zabiegi</h4><ul><li><a href="zabiegi/modelowanie-sylwetki/">Modelowanie sylwetki</a></li><li><a href="zabiegi/ems-twarzy/">EMS twarzy</a></li><li><a href="zabiegi/redukcja-cellulitu/">Redukcja cellulitu</a></li><li><a href="zabiegi/leczenie-bolu-plecow/">Leczenie bólu pleców</a></li><li><a href="zabiegi/mobilnosc/">Mobilność</a></li></ul></div>
@@ -629,6 +651,21 @@ h3{font-size:clamp(20px,1.5vw,25px)}
     var io=new IntersectionObserver(function(en){en.forEach(function(x){x.target.classList.toggle('in',x.isIntersecting)})},{threshold:.6});
     document.querySelectorAll('.card').forEach(function(el){io.observe(el)});
   }
+  document.querySelectorAll('.opw').forEach(function(w){
+    var row=w.querySelector('.ops');
+    w.querySelectorAll('.op-bar button').forEach(function(btn){btn.addEventListener('click',function(){
+      var k=btn.getAttribute('data-k');
+      w.querySelectorAll('.op-bar button').forEach(function(x){x.setAttribute('aria-pressed',x===btn?'true':'false')});
+      w.querySelectorAll('.op').forEach(function(o){o.hidden=!(k==='all'||o.getAttribute('data-k')===k)});
+      row.scrollLeft=0;
+    })});
+    function cl(){w.querySelectorAll('.op-t').forEach(function(t){var p=t.querySelector('p'),b=t.querySelector('.op-more');if(!t.classList.contains('open'))b.hidden=!(p.scrollHeight>p.clientHeight+2)})}
+    w.querySelectorAll('.op-more').forEach(function(b){b.addEventListener('click',function(){b.parentNode.classList.add('open');b.hidden=true})});
+    cl();w.querySelectorAll('.op-bar button').forEach(function(b){b.addEventListener('click',cl)});
+    function st(d){var c=row.querySelector('.op:not([hidden])');row.scrollBy({left:d*(c?c.offsetWidth+20:300),behavior:'smooth'})}
+    w.querySelector('.op-prev').addEventListener('click',function(){st(-1)});
+    w.querySelector('.op-next').addEventListener('click',function(){st(1)});
+  });
   document.querySelectorAll('.gal').forEach(function(g){
     var down=false,x0=0,s0=0;
     g.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;x0=e.clientX;s0=g.scrollLeft;g.classList.add('drag')});
