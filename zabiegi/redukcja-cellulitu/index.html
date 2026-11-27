@@ -52,6 +52,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .ticks li{position:relative;padding-left:26px;font-weight:700}
 .ticks li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;background:var(--or)}
 .ticks.two{grid-template-columns:1fr 1fr;gap:10px 24px}
+@media(min-width:601px){.ticks.two.cols{grid-auto-flow:column;grid-template-rows:repeat(5,auto)}}
 .txt>p{margin-top:16px;color:var(--muted)}
 .dark .txt>p{color:#C9D1D7}
 .txt>p.big{font-size:clamp(18px,1.3vw,21px);color:var(--ink);font-weight:700}
@@ -113,6 +114,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .crumbs a{text-decoration:none;color:#fff}.crumbs a:hover{color:var(--or)}
 .crumbs li+li::before{content:"/";margin-right:10px;color:var(--or)}
 .phero.plain{min-height:0;background:var(--slate)}
+.phero h1.h1-kontakt{max-width:none}.h1-kontakt .h1-l{display:block}
+@media(min-width:1000px){.h1-kontakt .h1-l{white-space:nowrap}}
 .phero.plain::after{display:none}
 @media(min-width:1800px){.phero.pb-split>img{left:auto;right:0;width:1774px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}}
 
@@ -282,6 +285,8 @@ a.p-it:hover{transform:translateY(-3px)}
 .form .agree a{color:#fff}
 .form .btn{width:100%}
 .form-msg{grid-column:1/-1;font-weight:700;color:var(--or);min-height:1em}
+.form-note{grid-column:1/-1;font-size:14px;color:#C9D1D7;margin-top:-4px}
+.form input.bad{border-color:var(--or);outline:2px solid var(--or)}
 .k-data{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:26px;font-size:15px;color:#C9D1D7}
 .k-data a{color:#fff;font-weight:700;text-decoration:none}
 
@@ -340,7 +345,7 @@ a.p-it:hover{transform:translateY(-3px)}
 .aside h3{font-size:22px}
 .aside p{color:#C9D1D7;margin-top:10px;font-size:16px}
 .aside .btn{width:100%;margin-top:20px}
-.aside a.tel{display:block;margin-top:14px;font-weight:900;font-size:22px;text-decoration:none;color:var(--or)}
+.aside a.tel{display:block;text-align:center;margin-top:14px;font-weight:900;font-size:22px;text-decoration:none;color:var(--or)}
 .legal{max-width:860px}
 .legal h2{font-size:clamp(21px,1.6vw,26px);text-transform:none;margin-top:36px}
 .legal p,.legal ul{margin-top:12px;color:var(--muted)}.legal ul{padding-left:22px}
@@ -483,8 +488,9 @@ a.p-it:hover{transform:translateY(-3px)}
       <p class="lead">Napisz, czego potrzebujesz: trening, zabieg albo szkolenie. Oddzwonimy z wolnym terminem i propozycją dopasowaną do Ciebie.</p>
       <form class="form" id="form" novalidate>
         <label>Imię<input name="imie" autocomplete="given-name" required></label>
-        <label>Telefon<input name="tel" type="tel" autocomplete="tel" required></label>
+        <label>Telefon<input name="tel" type="tel" autocomplete="tel"></label>
         <label class="full">E-mail<input name="email" type="email" autocomplete="email"></label>
+        <p class="form-note full">Podaj telefon albo e-mail, wystarczy jedno z nich.</p>
         <label class="full">Czego dotyczy zapytanie<select name="temat" id="temat"><option>Trening EMS z dojazdem</option><option>Trening próbny</option><option>Trening w parze</option><option>Zabieg: modelowanie sylwetki</option><option>Zabieg: EMS twarzy</option><option selected>Zabieg: redukcja cellulitu</option><option>Zabieg: leczenie bólu pleców</option><option>Zabieg: mobilność</option><option>Szkolenie EMS</option><option>Inne</option></select></label>
         <label class="full">Wiadomość<textarea name="wiad" placeholder="Np. miejscowość, preferowane dni i godziny"></textarea></label>
         <label class="full agree"><input type="checkbox" required> <span>Zapoznałem się z <a href="../../polityka-prywatnosci/">polityką prywatności</a> i zgadzam się na kontakt w sprawie zapytania.</span></label>
@@ -526,7 +532,7 @@ a.p-it:hover{transform:translateY(-3px)}
   var q=new URLSearchParams(location.search).get('temat');if(q)setT(q);
   document.querySelectorAll('[data-temat]').forEach(function(a){a.addEventListener('click',function(){setT(a.getAttribute('data-temat'));b.classList.remove('menu-open')})});
   var f=document.getElementById('form');
-  if(f)f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').textContent='To wersja do akceptacji: formularz zacznie wysyłać zapytania po uruchomieniu strony pod adresem impulse-therapy.pl.'});
+  if(f)f.addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('form-msg'),el=f.elements,tel=el.tel.value.trim(),em=el.email.value.trim();f.querySelectorAll('.bad').forEach(function(x){x.classList.remove('bad')});if(!el.imie.value.trim()){el.imie.classList.add('bad');el.imie.focus();m.textContent='Podaj imię.';return}if(!tel&&!em){el.tel.classList.add('bad');el.email.classList.add('bad');el.tel.focus();m.textContent='Podaj telefon albo e-mail, żebyśmy mogli odpowiedzieć.';return}if(tel&&tel.replace(/\D/g,'').length<9){el.tel.classList.add('bad');el.tel.focus();m.textContent='Sprawdź numer telefonu (min. 9 cyfr).';return}if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){el.email.classList.add('bad');el.email.focus();m.textContent='Sprawdź adres e-mail.';return}var ag=f.querySelector('.agree input');if(!ag.checked){ag.focus();m.textContent='Zaznacz zgodę na kontakt w sprawie zapytania.';return}m.textContent='To wersja do akceptacji: formularz zacznie wysyłać zapytania po uruchomieniu strony pod adresem impulse-therapy.pl.'});
   if('IntersectionObserver' in window && matchMedia('(hover:none)').matches){
     var io=new IntersectionObserver(function(en){en.forEach(function(x){x.target.classList.toggle('in',x.isIntersecting)})},{threshold:.6});
     document.querySelectorAll('.card').forEach(function(el){io.observe(el)});

@@ -52,6 +52,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .ticks li{position:relative;padding-left:26px;font-weight:700}
 .ticks li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;background:var(--or)}
 .ticks.two{grid-template-columns:1fr 1fr;gap:10px 24px}
+@media(min-width:601px){.ticks.two.cols{grid-auto-flow:column;grid-template-rows:repeat(5,auto)}}
 .txt>p{margin-top:16px;color:var(--muted)}
 .dark .txt>p{color:#C9D1D7}
 .txt>p.big{font-size:clamp(18px,1.3vw,21px);color:var(--ink);font-weight:700}
@@ -113,6 +114,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .crumbs a{text-decoration:none;color:#fff}.crumbs a:hover{color:var(--or)}
 .crumbs li+li::before{content:"/";margin-right:10px;color:var(--or)}
 .phero.plain{min-height:0;background:var(--slate)}
+.phero h1.h1-kontakt{max-width:none}.h1-kontakt .h1-l{display:block}
+@media(min-width:1000px){.h1-kontakt .h1-l{white-space:nowrap}}
 .phero.plain::after{display:none}
 @media(min-width:1800px){.phero.pb-split>img{left:auto;right:0;width:1774px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}}
 
@@ -282,6 +285,8 @@ a.p-it:hover{transform:translateY(-3px)}
 .form .agree a{color:#fff}
 .form .btn{width:100%}
 .form-msg{grid-column:1/-1;font-weight:700;color:var(--or);min-height:1em}
+.form-note{grid-column:1/-1;font-size:14px;color:#C9D1D7;margin-top:-4px}
+.form input.bad{border-color:var(--or);outline:2px solid var(--or)}
 .k-data{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:26px;font-size:15px;color:#C9D1D7}
 .k-data a{color:#fff;font-weight:700;text-decoration:none}
 
@@ -340,7 +345,7 @@ a.p-it:hover{transform:translateY(-3px)}
 .aside h3{font-size:22px}
 .aside p{color:#C9D1D7;margin-top:10px;font-size:16px}
 .aside .btn{width:100%;margin-top:20px}
-.aside a.tel{display:block;margin-top:14px;font-weight:900;font-size:22px;text-decoration:none;color:var(--or)}
+.aside a.tel{display:block;text-align:center;margin-top:14px;font-weight:900;font-size:22px;text-decoration:none;color:var(--or)}
 .legal{max-width:860px}
 .legal h2{font-size:clamp(21px,1.6vw,26px);text-transform:none;margin-top:36px}
 .legal p,.legal ul{margin-top:12px;color:var(--muted)}.legal ul{padding-left:22px}
@@ -498,20 +503,20 @@ a.p-it:hover{transform:translateY(-3px)}
   <div class="gear">
   <div><b>Czarny nadajnik przy stroju</b><span>Mały, bezprzewodowy nadajnik przypięty do stroju. Żadnych kabli, pełna swoboda ruchu w salonie, ogrodzie czy biurze.</span></div>
   <div><b>Trener z tabletem w ręku</b><span>Trener steruje impulsami z tabletu, stojąc obok Ciebie. Na bieżąco dobiera natężenie dla każdej partii mięśni.</span></div>
-  <div><b>Sprzęt przyjeżdża z nami</b><span>Nadajnik, tablet, kamizelki i matę przywozimy. Ty potrzebujesz tylko swojego stroju i około 2 x 2 metry wolnej podłogi.</span></div>
+  <div><b>Sprzęt przyjeżdża z nami</b><span>Nadajnik, tablet i kamizelki przywozimy ze sobą. Ty potrzebujesz jedynie 20 minut wolnego czasu i 2 x 2 metry podłogi.</span></div>
 </div>
 </div></section>
 <section class="sec"><div class="wrap split rev">
   <div class="txt">
     <h2>Jak przygotować się do treningu</h2><span class="bar"></span>
-    <ul class="ticks"><li>Posiłek: zjedz węglowodany (np. banan, owsianka) na 2 godziny przed treningiem.</li><li>Nawodnienie: wypij szklankę wody przed przyjazdem trenera.</li><li>Skóra: nie nakładaj balsamów na ciało w dniu treningu.</li><li>Przestrzeń: przygotuj kawałek wolnej podłogi, matę przywozimy.</li></ul>
+    <ul class="ticks"><li>Posiłek: zjedz węglowodany (np. banan, owsianka) na 2 godziny przed treningiem.</li><li>Nawodnienie: wypij szklankę wody przed przyjazdem trenera.</li><li>Skóra: nie nakładaj balsamów na ciało w dniu treningu.</li><li>Przestrzeń: przygotuj około 2 x 2 metry wolnej podłogi.</li></ul>
     <h3 style="margin-top:34px">Po treningu</h3>
     <ul class="ticks"><li>Pij wodę, minimum 1,5 litra dodatkowo w ciągu doby.</li><li>Przez 24 godziny zrezygnuj z alkoholu.</li><li>Daj mięśniom 3-4 dni na pełną odbudowę.</li></ul>
   </div>
   <div class="ph"><img src="../img/f/trener-dom-1200.webp" srcset="../img/f/trener-dom-800.webp 800w, ../img/f/trener-dom-1200.webp 1200w" sizes="(max-width:900px) 92vw, 44vw" width="1200" height="800" alt="Trener z tabletem i klientka w trakcie treningu w domu" loading="lazy" decoding="async"></div>
 </div></section>
 <section class="sec grey"><div class="wrap split">
-  <div class="ph"><img src="../img/f/grupa-1200.webp" srcset="../img/f/grupa-800.webp 800w, ../img/f/grupa-1200.webp 1200w, ../img/f/grupa-1600.webp 1600w, ../img/f/grupa-2400.webp 2400w, ../img/f/grupa-2560.webp 2560w" sizes="(max-width:900px) 92vw, 44vw" width="2560" height="1350" alt="Trening EMS w parze i w grupie" loading="lazy" decoding="async"></div>
+  <div class="ph"><img src="../img/f/para-1398-960.webp" srcset="../img/f/para-1398-640.webp 640w, ../img/f/para-1398-960.webp 960w, ../img/f/para-1398-1280.webp 1280w, ../img/f/para-1398-1920.webp 1920w" sizes="(max-width:900px) 92vw, 44vw" width="1920" height="1496" alt="Para w strojach EMS przed wspólnym treningiem" loading="lazy" decoding="async"></div>
   <div class="txt">
     <h2>Trenuj w parze</h2><span class="bar"></span>
     <p class="big">Co zyskacie, ćwicząc razem?</p>
@@ -523,7 +528,7 @@ a.p-it:hover{transform:translateY(-3px)}
   <div class="center"><h2>Efekty treningów</h2><span class="bar"></span><p class="lead">Nasi klienci najczęściej zgłaszają poprawę w dwóch obszarach.</p></div>
   <div class="pts" style="max-width:1000px;margin:36px auto 0">
     <div><b>Mniej bólu pleców i sztywności</b><span>Impulsy docierają do mięśni przykręgosłupowych, pomagając je wzmocnić i poprawić kontrolę postawy. U wielu osób pracujących przy biurku oznacza to wyraźnie mniejszy ból w odcinku lędźwiowym.</span></div>
-    <div><b>Redukcja wagi i ujędrnienie</b><span>Intensywna praca wielu grup mięśniowych zwiększa wydatek energii podczas sesji i tuż po niej. Razem z rozsądną dietą i regularnością daje to bardzo dobre efekty.</span></div>
+    <div><b>Redukcja wagi i przyrost masy mięśniowej</b><span>Intensywna praca wielu grup mięśniowych zwiększa wydatek energii podczas sesji i tuż po niej, a mięśnie dostają mocny bodziec do wzrostu. Razem z rozsądną dietą i regularnością daje to bardzo dobre efekty.</span></div>
   </div>
   <p class="lead center" style="margin:30px auto 0">EMS to skuteczne narzędzie, ale nie magia. Nie obiecujemy cudów bez wysiłku, obiecujemy efektywność i bezpieczeństwo.</p>
   <div class="opw"><div class="op-bar" role="group" aria-label="Filtr opinii"><button type="button" data-k="szkolenia" aria-pressed="true">Szkolenia (4)</button><button type="button" data-k="treningi" aria-pressed="false">Treningi (9)</button><button type="button" data-k="all" aria-pressed="false">Wszystkie</button></div><div class="ops" tabindex="0" aria-label="Opinie klientów"><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Jestem bardzo zadowolona ze szkolenia! Ogrom wiedzy, fajne wskazówki odnośnie prowadzenia treningów i ogólnie całego biznesu. Na każdym etapie dało się odczuć, że wszystko jest poparte latami doświadczenia 💪🏼 bardzo polecam!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Wiktoria Bęben</b>Opinia z Google · 15.01.2024</span></article><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Szkolenie EMS -  dynamika, świetny trener i solidna dawka unikalnej wiedzy.<br>Szkolenie EMS było znakomite. Całościowo zaspokoiło moje oczekiwania.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Malwina Grzelczyk</b>Opinia z Google · 06.12.2023</span></article><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Ukończyłam zaawansowane szkolenie- kompleksowe wykorzystanie elektrostymulacji mięśni EMS w treningu personalnym. Dużo przydatnej oraz ciekawej wiedzy praktycznej jak i teoretycznej. Polecam serdecznie 💪</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Dorota Zaczkowska</b>Opinia z Google · 04.12.2023</span></article><article class="op" data-k="szkolenia"><span class="op-k">Szkolenie EMS</span><div class="op-t"><p>Polecam każdemu! Jestem po szkoleniu na trenera EMS u Tomka i jestem zachwycona! Tomek to profesjonalista w każdym calu. Jego ogromna wiedza, pasja i zaangażowanie sprawiają, że człowiek z miejsca chce ruszyć w świat i zarażać kolejnych ludzi zamiłowaniem do treningów EMS. Jeśli ktoś wątpi w skuteczność tych treningów to zapraszam do Tomka. Po jednym treningu z nim, zmienicie zdanie 😄<br>Dziękuję Tomek za wiedzę którą się ze mną podzieliłeś i za trening 🙂 Do zobaczenia 😀</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Beata Cimcioch</b>Opinia z Google · 13.08.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Polecam!!! Super treningi Pan Tomek bardzo miły i doświadczony trener jestem mega zadowolona i zachęcam do ćwiczeń. Duży też plus że<br>robimy formę  nie ruszając się z domu.:-)</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Edyta Wojewódzka</b>Opinia z Google · 15.01.2024</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Polecam<br>Ćwiczymy z mężem od 3 miesięcy dostrzegam same zalety.Po pierwsze minął ból kręgosłupa który straszne utrudniał funkcjonowanie.Po drugie treningi odbywają się w domu niesamowity komfort.<br>A najważniejsze:<br>trener Tomasz który niesamowicie jest zaangażowany w swoją pracę ,zna się na tym co robi i treningi  przebiegają w bardzo miłej atmosferze.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Donata Korzycka</b>Opinia z Google · 17.11.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Bardzo polecam treningi z Tomkiem, jest bardzo miły, uczciwy i nie obiecuje Bóg wie czego, po prostu mówi jak jest co mi bardzo odpowiada. Ma świetne podejście do osób które nie mają żadnego doczynienia ze sportem, spokojnie wszutko tłumaczy ale daje wycisk i nie oszczędza  😀.<br>Na każdy Trening przyjeżdża punktualnie a w razie spozienia zawsze informuje.<br>Przykro mi, że z powodu choroby nie mogę kontynuować treningów ale wszystkim polecam z całego serca ❤️</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Iwona Sikora</b>Opinia z Google · 06.11.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Najlepsze treningi najlepszy trener Tomek.<br>Osoba z ogromnym zaangażowaniem po prostu uwielbiam!!<br>Ćwiczymy już długo wiec do końca świata i jeden dzień dłużej 😂<br>Trening= efekty tutaj ta reguła jest nie do podważenia 🩷</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Sandra Fabisiak</b>Opinia z Google · 06.10.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Na początku nie wierzyłem w skuteczność EMS. Przypadek sprawił, że spróbowałem. Już po 3 treningach czułem różnice. Tak jakby moje ciało przestało być „rozklekotane”. Ćwiczę do dziś już prawie 6mcy. A nie lubię ćwiczeń siłowych. Wielka w tym zasługa Tomka, który zna się na rzeczy. Potrafi zmotywować. Potrafi „pocisnąć” na maksa. I widać tego efekty. Z czystym sumieniem polecam!!!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Piotr B.</b>Opinia z Google · 28.09.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Trening ciężki ale po paru miesiącach naprawdę czuć efekty!<br>W końcu nie dostaję zadyszki wchodzą w pracy po schodach i czuję mięśnie o których nawet nie wiedziałem!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Juliusz Rembowski</b>Opinia z Google · 01.09.2023</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Trening z Tomkiem to profesjonalizm i ogromna wiedza o EMS. Polecam każdemu, kto szuka skutecznego treningu bez wychodzenia z domu.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Robert Kubiak</b>Opinia klienta</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Dzięki treningom EMS z Tomkiem zrzuciłam kilka kilogramów i znacząco zmniejszyłam ilość tkanki tłuszczowej. Super wygoda z dojazdem!</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Jolanta Pustelnik</b>Opinia klienta</span></article><article class="op" data-k="treningi" hidden><span class="op-k">Trening EMS</span><div class="op-t"><p>Trening z Tomkiem to inwestycja w dobre samopoczucie. Profesjonalne podejście i ogromne doświadczenie.</p><button type="button" class="op-more" hidden>Czytaj całą opinię</button></div><span class="op-a"><b>Agata Czernik</b>Opinia klienta</span></article></div><div class="op-nav"><a class="more" href="https://www.google.com/maps/search/?api=1&amp;query=IMPULSE+THERAPY+Trening+EMS+%C5%81%C3%B3d%C5%BA" target="_blank" rel="noopener">Wszystkie opinie w Google</a><span><button type="button" class="op-prev" aria-label="Poprzednie opinie"></button><button type="button" class="op-next" aria-label="Następne opinie"></button></span></div></div>
@@ -541,8 +546,9 @@ a.p-it:hover{transform:translateY(-3px)}
       <p class="lead">Napisz, czego potrzebujesz: trening, zabieg albo szkolenie. Oddzwonimy z wolnym terminem i propozycją dopasowaną do Ciebie.</p>
       <form class="form" id="form" novalidate>
         <label>Imię<input name="imie" autocomplete="given-name" required></label>
-        <label>Telefon<input name="tel" type="tel" autocomplete="tel" required></label>
+        <label>Telefon<input name="tel" type="tel" autocomplete="tel"></label>
         <label class="full">E-mail<input name="email" type="email" autocomplete="email"></label>
+        <p class="form-note full">Podaj telefon albo e-mail, wystarczy jedno z nich.</p>
         <label class="full">Czego dotyczy zapytanie<select name="temat" id="temat"><option>Trening EMS z dojazdem</option><option selected>Trening próbny</option><option>Trening w parze</option><option>Zabieg: modelowanie sylwetki</option><option>Zabieg: EMS twarzy</option><option>Zabieg: redukcja cellulitu</option><option>Zabieg: leczenie bólu pleców</option><option>Zabieg: mobilność</option><option>Szkolenie EMS</option><option>Inne</option></select></label>
         <label class="full">Wiadomość<textarea name="wiad" placeholder="Np. miejscowość, preferowane dni i godziny"></textarea></label>
         <label class="full agree"><input type="checkbox" required> <span>Zapoznałem się z <a href="../polityka-prywatnosci/">polityką prywatności</a> i zgadzam się na kontakt w sprawie zapytania.</span></label>
@@ -584,7 +590,7 @@ a.p-it:hover{transform:translateY(-3px)}
   var q=new URLSearchParams(location.search).get('temat');if(q)setT(q);
   document.querySelectorAll('[data-temat]').forEach(function(a){a.addEventListener('click',function(){setT(a.getAttribute('data-temat'));b.classList.remove('menu-open')})});
   var f=document.getElementById('form');
-  if(f)f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').textContent='To wersja do akceptacji: formularz zacznie wysyłać zapytania po uruchomieniu strony pod adresem impulse-therapy.pl.'});
+  if(f)f.addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('form-msg'),el=f.elements,tel=el.tel.value.trim(),em=el.email.value.trim();f.querySelectorAll('.bad').forEach(function(x){x.classList.remove('bad')});if(!el.imie.value.trim()){el.imie.classList.add('bad');el.imie.focus();m.textContent='Podaj imię.';return}if(!tel&&!em){el.tel.classList.add('bad');el.email.classList.add('bad');el.tel.focus();m.textContent='Podaj telefon albo e-mail, żebyśmy mogli odpowiedzieć.';return}if(tel&&tel.replace(/\D/g,'').length<9){el.tel.classList.add('bad');el.tel.focus();m.textContent='Sprawdź numer telefonu (min. 9 cyfr).';return}if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){el.email.classList.add('bad');el.email.focus();m.textContent='Sprawdź adres e-mail.';return}var ag=f.querySelector('.agree input');if(!ag.checked){ag.focus();m.textContent='Zaznacz zgodę na kontakt w sprawie zapytania.';return}m.textContent='To wersja do akceptacji: formularz zacznie wysyłać zapytania po uruchomieniu strony pod adresem impulse-therapy.pl.'});
   if('IntersectionObserver' in window && matchMedia('(hover:none)').matches){
     var io=new IntersectionObserver(function(en){en.forEach(function(x){x.target.classList.toggle('in',x.isIntersecting)})},{threshold:.6});
     document.querySelectorAll('.card').forEach(function(el){io.observe(el)});

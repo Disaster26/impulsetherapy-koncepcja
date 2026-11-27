@@ -52,6 +52,7 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .ticks li{position:relative;padding-left:26px;font-weight:700}
 .ticks li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;background:var(--or)}
 .ticks.two{grid-template-columns:1fr 1fr;gap:10px 24px}
+@media(min-width:601px){.ticks.two.cols{grid-auto-flow:column;grid-template-rows:repeat(5,auto)}}
 .txt>p{margin-top:16px;color:var(--muted)}
 .dark .txt>p{color:#C9D1D7}
 .txt>p.big{font-size:clamp(18px,1.3vw,21px);color:var(--ink);font-weight:700}
@@ -113,6 +114,8 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .crumbs a{text-decoration:none;color:#fff}.crumbs a:hover{color:var(--or)}
 .crumbs li+li::before{content:"/";margin-right:10px;color:var(--or)}
 .phero.plain{min-height:0;background:var(--slate)}
+.phero h1.h1-kontakt{max-width:none}.h1-kontakt .h1-l{display:block}
+@media(min-width:1000px){.h1-kontakt .h1-l{white-space:nowrap}}
 .phero.plain::after{display:none}
 @media(min-width:1800px){.phero.pb-split>img{left:auto;right:0;width:1774px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}}
 
@@ -282,6 +285,8 @@ a.p-it:hover{transform:translateY(-3px)}
 .form .agree a{color:#fff}
 .form .btn{width:100%}
 .form-msg{grid-column:1/-1;font-weight:700;color:var(--or);min-height:1em}
+.form-note{grid-column:1/-1;font-size:14px;color:#C9D1D7;margin-top:-4px}
+.form input.bad{border-color:var(--or);outline:2px solid var(--or)}
 .k-data{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:26px;font-size:15px;color:#C9D1D7}
 .k-data a{color:#fff;font-weight:700;text-decoration:none}
 
@@ -340,7 +345,7 @@ a.p-it:hover{transform:translateY(-3px)}
 .aside h3{font-size:22px}
 .aside p{color:#C9D1D7;margin-top:10px;font-size:16px}
 .aside .btn{width:100%;margin-top:20px}
-.aside a.tel{display:block;margin-top:14px;font-weight:900;font-size:22px;text-decoration:none;color:var(--or)}
+.aside a.tel{display:block;text-align:center;margin-top:14px;font-weight:900;font-size:22px;text-decoration:none;color:var(--or)}
 .legal{max-width:860px}
 .legal h2{font-size:clamp(21px,1.6vw,26px);text-transform:none;margin-top:36px}
 .legal p,.legal ul{margin-top:12px;color:var(--muted)}.legal ul{padding-left:22px}
@@ -526,7 +531,7 @@ a.p-it:hover{transform:translateY(-3px)}
     <div class="gear">
   <div><b>Czarny nadajnik przy stroju</b><span>Mały, bezprzewodowy nadajnik przypięty do stroju. Żadnych kabli, pełna swoboda ruchu w salonie, ogrodzie czy biurze.</span></div>
   <div><b>Trener z tabletem w ręku</b><span>Trener steruje impulsami z tabletu, stojąc obok Ciebie. Na bieżąco dobiera natężenie dla każdej partii mięśni.</span></div>
-  <div><b>Sprzęt przyjeżdża z nami</b><span>Nadajnik, tablet, kamizelki i matę przywozimy. Ty potrzebujesz tylko swojego stroju i około 2 x 2 metry wolnej podłogi.</span></div>
+  <div><b>Sprzęt przyjeżdża z nami</b><span>Nadajnik, tablet i kamizelki przywozimy ze sobą. Ty potrzebujesz jedynie 20 minut wolnego czasu i 2 x 2 metry podłogi.</span></div>
 </div>
   </div>
 </section>
@@ -535,7 +540,7 @@ a.p-it:hover{transform:translateY(-3px)}
   <div class="wrap">
     <h2>EMS dla ciała i twarzy</h2><span class="kicker">Uroda, pielęgnacja, zdrowie</span><span class="bar"></span>
     <p class="lead">Współczesna kosmetologia i nowoczesne zabiegi na ciało coraz częściej wykorzystują elektrostymulację mięśni. EMS sprawdza się w modelowaniu sylwetki i odchudzaniu, w odmładzaniu oraz w łagodzeniu dolegliwości bólowych.</p>
-    <div class="cards c5"><a class="card" href="zabiegi/modelowanie-sylwetki/"><div class="ph"><img src="img/f/lezenie-1200.webp" srcset="img/f/lezenie-800.webp 800w, img/f/lezenie-1200.webp 1200w, img/f/lezenie-1600.webp 1600w, img/f/lezenie-2200.webp 2200w, img/f/lezenie-2560.webp 2560w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="2560" height="1502" alt="Zabieg EMS na leżąco w domu klientki" loading="lazy" decoding="async"></div><div class="bd"><h3>Modelowanie sylwetki</h3><p>Zabiegi EMS na leżąco: wysmuklenie, ujędrnienie, uniesienie pośladków.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/ems-twarzy/"><div class="ph"><img src="img/twarz-lifting.webp" width="720" height="405" alt="Kobieta po zabiegu pielęgnacyjnym twarzy" loading="lazy" decoding="async"></div><div class="bd"><h3>EMS twarzy (Face EMS)</h3><p>Naturalny lifting bez skalpela, z dojazdem do Ciebie.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/redukcja-cellulitu/"><div class="ph"><img src="img/f/sofa-2-720.webp" srcset="img/f/sofa-2-480.webp 480w, img/f/sofa-2-720.webp 720w, img/f/sofa-2-960.webp 960w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="960" height="1296" alt="Klientka w suchym kombinezonie EMS na sofie" loading="lazy" decoding="async"></div><div class="bd"><h3>Redukcja cellulitu</h3><p>Elektrostymulacja pobudza mięśnie i krążenie, wygładza skórę.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/leczenie-bolu-plecow/"><div class="ph"><img src="img/f/plecy-960.webp" srcset="img/f/plecy-640.webp 640w, img/f/plecy-960.webp 960w, img/f/plecy-1280.webp 1280w, img/f/plecy-1920.webp 1920w, img/f/plecy-2560.webp 2560w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="2560" height="2347" alt="Zabieg EMS na leżąco z fizjoterapeutą" loading="lazy" decoding="async"></div><div class="bd"><h3>Leczenie bólu pleców</h3><p>Sesje lecznicze EMS w komfortowej pozycji leżącej.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/mobilnosc/"><div class="ph"><img src="img/f/mob-bosu-960.webp" srcset="img/f/mob-bosu-640.webp 640w, img/f/mob-bosu-960.webp 960w, img/f/mob-bosu-1280.webp 1280w, img/f/mob-bosu-1920.webp 1920w, img/f/mob-bosu-2560.webp 2560w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="2560" height="2378" alt="Ćwiczenia mobilności z trenerem w stroju EMS" loading="lazy" decoding="async"></div><div class="bd"><h3>Mobilność</h3><p>Ruchomość stawów, stabilizacja i powrót do sprawności.</p><span class="more">Zobacz zabieg</span></div></a></div>
+    <div class="cards c5"><a class="card" href="zabiegi/modelowanie-sylwetki/"><div class="ph"><img src="img/f/lezenie-1200.webp" srcset="img/f/lezenie-800.webp 800w, img/f/lezenie-1200.webp 1200w, img/f/lezenie-1600.webp 1600w, img/f/lezenie-2200.webp 2200w, img/f/lezenie-2560.webp 2560w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="2560" height="1502" alt="Zabieg EMS na leżąco w domu klientki" loading="lazy" decoding="async"></div><div class="bd"><h3>Modelowanie sylwetki</h3><p>Zabiegi EMS na leżąco: wysmuklenie, ujędrnienie, uniesienie pośladków.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/ems-twarzy/"><div class="ph"><img src="img/twarz-lifting.webp" width="720" height="405" alt="Kobieta po zabiegu pielęgnacyjnym twarzy" loading="lazy" decoding="async"></div><div class="bd"><h3>EMS twarzy (Face EMS)</h3><p>Naturalny lifting bez skalpela, z dojazdem do Ciebie.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/redukcja-cellulitu/"><div class="ph"><img src="img/f/sofa-2-720.webp" srcset="img/f/sofa-2-480.webp 480w, img/f/sofa-2-720.webp 720w, img/f/sofa-2-960.webp 960w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="960" height="1296" alt="Klientka w suchym kombinezonie EMS na sofie" style="object-position:50% 12%" loading="lazy" decoding="async"></div><div class="bd"><h3>Redukcja cellulitu</h3><p>Elektrostymulacja pobudza mięśnie i krążenie, wygładza skórę.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/leczenie-bolu-plecow/"><div class="ph"><img src="img/f/plecy-960.webp" srcset="img/f/plecy-640.webp 640w, img/f/plecy-960.webp 960w, img/f/plecy-1280.webp 1280w, img/f/plecy-1920.webp 1920w, img/f/plecy-2560.webp 2560w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="2560" height="2347" alt="Zabieg EMS na leżąco z fizjoterapeutą" loading="lazy" decoding="async"></div><div class="bd"><h3>Leczenie bólu pleców</h3><p>Sesje lecznicze EMS w komfortowej pozycji leżącej.</p><span class="more">Zobacz zabieg</span></div></a><a class="card" href="zabiegi/mobilnosc/"><div class="ph"><img src="img/f/mob-bosu-960.webp" srcset="img/f/mob-bosu-640.webp 640w, img/f/mob-bosu-960.webp 960w, img/f/mob-bosu-1280.webp 1280w, img/f/mob-bosu-1920.webp 1920w, img/f/mob-bosu-2560.webp 2560w" sizes="(max-width:600px) 92vw, (max-width:1180px) 46vw, 30vw" width="2560" height="2378" alt="Ćwiczenia mobilności z trenerem w stroju EMS" loading="lazy" decoding="async"></div><div class="bd"><h3>Mobilność</h3><p>Ruchomość stawów, stabilizacja i powrót do sprawności.</p><span class="more">Zobacz zabieg</span></div></a></div>
   </div>
 </section>
 
@@ -605,8 +610,9 @@ a.p-it:hover{transform:translateY(-3px)}
       <p class="lead">Napisz, czego potrzebujesz: trening, zabieg albo szkolenie. Oddzwonimy z wolnym terminem i propozycją dopasowaną do Ciebie.</p>
       <form class="form" id="form" novalidate>
         <label>Imię<input name="imie" autocomplete="given-name" required></label>
-        <label>Telefon<input name="tel" type="tel" autocomplete="tel" required></label>
+        <label>Telefon<input name="tel" type="tel" autocomplete="tel"></label>
         <label class="full">E-mail<input name="email" type="email" autocomplete="email"></label>
+        <p class="form-note full">Podaj telefon albo e-mail, wystarczy jedno z nich.</p>
         <label class="full">Czego dotyczy zapytanie<select name="temat" id="temat"><option>Trening EMS z dojazdem</option><option selected>Trening próbny</option><option>Trening w parze</option><option>Zabieg: modelowanie sylwetki</option><option>Zabieg: EMS twarzy</option><option>Zabieg: redukcja cellulitu</option><option>Zabieg: leczenie bólu pleców</option><option>Zabieg: mobilność</option><option>Szkolenie EMS</option><option>Inne</option></select></label>
         <label class="full">Wiadomość<textarea name="wiad" placeholder="Np. miejscowość, preferowane dni i godziny"></textarea></label>
         <label class="full agree"><input type="checkbox" required> <span>Zapoznałem się z <a href="polityka-prywatnosci/">polityką prywatności</a> i zgadzam się na kontakt w sprawie zapytania.</span></label>
@@ -648,7 +654,7 @@ a.p-it:hover{transform:translateY(-3px)}
   var q=new URLSearchParams(location.search).get('temat');if(q)setT(q);
   document.querySelectorAll('[data-temat]').forEach(function(a){a.addEventListener('click',function(){setT(a.getAttribute('data-temat'));b.classList.remove('menu-open')})});
   var f=document.getElementById('form');
-  if(f)f.addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').textContent='To wersja do akceptacji: formularz zacznie wysyłać zapytania po uruchomieniu strony pod adresem impulse-therapy.pl.'});
+  if(f)f.addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('form-msg'),el=f.elements,tel=el.tel.value.trim(),em=el.email.value.trim();f.querySelectorAll('.bad').forEach(function(x){x.classList.remove('bad')});if(!el.imie.value.trim()){el.imie.classList.add('bad');el.imie.focus();m.textContent='Podaj imię.';return}if(!tel&&!em){el.tel.classList.add('bad');el.email.classList.add('bad');el.tel.focus();m.textContent='Podaj telefon albo e-mail, żebyśmy mogli odpowiedzieć.';return}if(tel&&tel.replace(/\D/g,'').length<9){el.tel.classList.add('bad');el.tel.focus();m.textContent='Sprawdź numer telefonu (min. 9 cyfr).';return}if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){el.email.classList.add('bad');el.email.focus();m.textContent='Sprawdź adres e-mail.';return}var ag=f.querySelector('.agree input');if(!ag.checked){ag.focus();m.textContent='Zaznacz zgodę na kontakt w sprawie zapytania.';return}m.textContent='To wersja do akceptacji: formularz zacznie wysyłać zapytania po uruchomieniu strony pod adresem impulse-therapy.pl.'});
   if('IntersectionObserver' in window && matchMedia('(hover:none)').matches){
     var io=new IntersectionObserver(function(en){en.forEach(function(x){x.target.classList.toggle('in',x.isIntersecting)})},{threshold:.6});
     document.querySelectorAll('.card').forEach(function(el){io.observe(el)});
