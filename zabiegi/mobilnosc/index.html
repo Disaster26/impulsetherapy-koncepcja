@@ -209,6 +209,14 @@ h3{font-size:clamp(20px,1.5vw,25px)}
 .op{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;background:#fff;padding:28px 28px 26px;border-left:5px solid var(--or);display:flex;flex-direction:column}
 .sec:not(.grey) .op{background:var(--grey)}
 .op[hidden]{display:none}
+.tps{display:flex;gap:20px;margin-top:44px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 0 30px}
+.tps::-webkit-scrollbar{display:none}
+.tps>.card{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start}
+.tpw .op-nav{margin-top:0}
+.tp-n{color:var(--muted);font-size:15px}
+.tpw.fit .op-nav span:last-child{display:none}
+@media(max-width:900px){.tps>.card{flex-basis:calc((100% - 20px)/2)}}
+@media(max-width:600px){.tps>.card{flex-basis:86%}}
 .op-k{font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--or-d)}
 .op-t{margin-top:10px;flex:1}
 .op-t p{font-size:16.5px;line-height:1.6;color:var(--ink)}
@@ -484,7 +492,7 @@ a.p-it:hover{transform:translateY(-3px)}
   <div class="ph"><img src="../../img/f/stretch-1269-960.webp" srcset="../../img/f/stretch-1269-640.webp 640w, ../../img/f/stretch-1269-960.webp 960w, ../../img/f/stretch-1269-1280.webp 1280w, ../../img/f/stretch-1269-1920.webp 1920w" sizes="(max-width:900px) 92vw, 44vw" width="1920" height="2216" alt="Klientka w stroju EMS rozciąga się z rękami uniesionymi w górę" loading="lazy" decoding="async"></div>
 </div></section>
 <section class="sec"><div class="wrap"><h2>Przeczytaj w poradniku</h2><span class="bar"></span>
-<div class="cards"><a class="card" href="../../stretching-i-pilates-lodz-jak-poprawic-mobilnosc-kompletny-przewodnik-dla-mieszkancow-lodzi/"><div class="ph"><img src="../../img/p/9869.webp" width="720" height="481" alt="Stretching i pilates - jak poprawić mobilność" loading="lazy" decoding="async"></div><div class="bd"><h3>Stretching i Pilates Łódź – jak poprawić mobilność? Kompletny przewodnik dla mieszkańców Łodzi 🧘‍♀️✨</h3><span class="more">Czytaj w poradniku</span></div></a><a class="card" href="../../stretching-lodz-profesjonalne-rozciaganie-miesni-w-domu-z-dojazdem-trenera/"><div class="ph"><img src="../../img/p/9456.webp" width="720" height="480" alt="Stretching Łódź – profesjonalne rozciąganie mięśni w domu z dojazdem trenera" loading="lazy" decoding="async"></div><div class="bd"><h3>Stretching Łódź – profesjonalne rozciąganie mięśni w domu z dojazdem trenera</h3><span class="more">Czytaj w poradniku</span></div></a><a class="card" href="../../czy-trening-ems-wspiera-rehabilitacje-po-kontuzjach/"><div class="ph"><img src="../../img/p/8256.webp" width="768" height="589" alt="Czy trening EMS wspiera rehabilitację po kontuzjach?" loading="lazy" decoding="async"></div><div class="bd"><h3>Czy trening EMS wspiera rehabilitację po kontuzjach?</h3><span class="more">Czytaj w poradniku</span></div></a></div>
+<div class="tpw" data-temat-wpisow="mobilnosc"><div class="tps" tabindex="0" aria-label="Wpisy poradnika: Mobilność i stretching"><a class="card" href="../../stretching-i-pilates-lodz-jak-poprawic-mobilnosc-kompletny-przewodnik-dla-mieszkancow-lodzi/"><div class="ph"><img src="../../img/p/9869.webp" width="720" height="481" alt="Stretching i pilates - jak poprawić mobilność" loading="lazy" decoding="async"></div><div class="bd"><h3>Stretching i Pilates Łódź – jak poprawić mobilność? Kompletny przewodnik dla mieszkańców Łodzi 🧘‍♀️✨</h3><span class="more">Czytaj w poradniku</span></div></a><a class="card" href="../../stretching-lodz-profesjonalne-rozciaganie-miesni-w-domu-z-dojazdem-trenera/"><div class="ph"><img src="../../img/p/9456.webp" width="720" height="480" alt="Stretching Łódź – profesjonalne rozciąganie mięśni w domu z dojazdem trenera" loading="lazy" decoding="async"></div><div class="bd"><h3>Stretching Łódź – profesjonalne rozciąganie mięśni w domu z dojazdem trenera</h3><span class="more">Czytaj w poradniku</span></div></a><a class="card" href="../../stretching-klucz-do-zdrowia-mobilnosci-i-efektywnosci-treningow-ems-w-lodzi-i-w-domu/"><div class="ph"><img src="../../img/p/9390.webp" width="720" height="481" alt="Stretching – klucz do zdrowia, mobilności i efektywności treningów EMS w Łodzi i w domu" loading="lazy" decoding="async"></div><div class="bd"><h3>Stretching – klucz do zdrowia, mobilności i efektywności treningów EMS w Łodzi i w domu</h3><span class="more">Czytaj w poradniku</span></div></a><a class="card" href="../../czy-trening-ems-wspiera-rehabilitacje-po-kontuzjach/"><div class="ph"><img src="../../img/p/8256.webp" width="768" height="589" alt="Czy trening EMS wspiera rehabilitację po kontuzjach?" loading="lazy" decoding="async"></div><div class="bd"><h3>Czy trening EMS wspiera rehabilitację po kontuzjach?</h3><span class="more">Czytaj w poradniku</span></div></a></div><div class="op-nav"><span class="tp-n">4 wpisy w temacie Mobilność i stretching</span><span><button type="button" class="op-prev" aria-label="Poprzednie wpisy"></button><button type="button" class="op-next" aria-label="Następne wpisy"></button></span></div></div>
 </div></section>
 <section class="kontakt" id="zapytanie">
   <div class="k-grid">
@@ -555,6 +563,14 @@ a.p-it:hover{transform:translateY(-3px)}
     w.querySelectorAll('.op-more').forEach(function(b){b.addEventListener('click',function(){b.parentNode.classList.add('open');b.hidden=true})});
     cl();w.querySelectorAll('.op-bar button').forEach(function(b){b.addEventListener('click',cl)});
     function st(d){var c=row.querySelector('.op:not([hidden])');row.scrollBy({left:d*(c?c.offsetWidth+20:300),behavior:'smooth'})}
+    w.querySelector('.op-prev').addEventListener('click',function(){st(-1)});
+    w.querySelector('.op-next').addEventListener('click',function(){st(1)});
+  });
+  document.querySelectorAll('.tpw').forEach(function(w){
+    var row=w.querySelector('.tps');
+    function fit(){w.classList.toggle('fit',row.scrollWidth<=row.clientWidth+2)}
+    fit();addEventListener('resize',fit);
+    function st(d){var c=row.querySelector('.card');row.scrollBy({left:d*(c?c.offsetWidth+20:300),behavior:'smooth'})}
     w.querySelector('.op-prev').addEventListener('click',function(){st(-1)});
     w.querySelector('.op-next').addEventListener('click',function(){st(1)});
   });
